@@ -7,7 +7,7 @@ const Logo = () => {
     <a href="#">
       <Image
         src={logo}
-        alt="logo header"
+        alt="logo"
       />
     </a>
   )
