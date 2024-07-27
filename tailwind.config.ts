@@ -22,9 +22,12 @@ const config: Config = {
         neutralPrimary: 'rgb(237, 238, 240, 96%)',
         neutralSecondary: 'rgb(237, 238, 240, 82%)',
         neutralTertiary: 'rgb(237, 238, 240, 68%)',
-      }
+      },
+      transparent: 'transparent'
     },
-    extend: {},
+    extend: {
+      622: '622px'
+    },
   },
   plugins: [],
 };
