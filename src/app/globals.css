@@ -18,7 +18,12 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background-color: #18191B;
+  font-family: "Fira Sans Condensed";
+  font-style: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: rgba(237, 238, 240, 0.82);
+  background-color: #18191b;
 }
 
 @layer utilities {
