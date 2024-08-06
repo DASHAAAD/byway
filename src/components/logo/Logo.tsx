@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import Image from 'next/image'
 import logo from '../../image/logo.svg'
 
-const Logo = () => {
+const Logo:FunctionComponent = () => {
   return (
     <a href="#">
       <Image

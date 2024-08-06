@@ -1,0 +1,29 @@
+.wrapper {
+}
+
+.info {
+}
+
+.title {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+
+    color: rgba(73, 88, 198, 0.96);
+}
+
+.text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: rgba(28, 32, 36, 0.72);
+}
+
+.price {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: rgba(73, 88, 198, 0.96);
+}

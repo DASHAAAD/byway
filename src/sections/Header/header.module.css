@@ -1,0 +1,24 @@
+/* доделать */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo,
+.form {
+    display: flex;
+    align-items: center;
+}
+
+.link {
+    margin-left: 24px;
+}
+
+.formcolor {
+    /* background-color: ; */
+}
+
+.input {
+    background-color: transparent;
+}
