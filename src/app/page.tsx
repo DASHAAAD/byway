@@ -1,3 +1,4 @@
+
 import Footer from "@/sections/Footer/Footer";
 import Header from "@/sections/Header/Header";
 
@@ -6,7 +7,7 @@ export default function Home() {
     <main className="bg-slate-500 flex flex-col h-screen justify-between">
 
       <Header />
-      <Footer />
+     <Footer/>
 
     </main>
   );
