@@ -1,16 +1,15 @@
 import React, { FunctionComponent } from 'react'
 import Image from 'next/image'
-import './CardProps'
+import { cardItems, CardProps } from './card-props'
 import card from '../../image/card.png'
 
 import styles from './card.module.css'
 
-const Card: FunctionComponent<cardProps> = function () {
+const Card: FunctionComponent<CardProps> = function () {
     return (
         <div className={styles.wrapper}>
            {cardItems.cover}
-            <Image
-                src={card} alt={''} />
+            <Image src={card} alt={''} />
             <div className={styles.info}>
                 <h2 className={styles.title}>{cardItems.title}</h2>
                 <p className={styles.text}>{cardItems.name}</p>
