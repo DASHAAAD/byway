@@ -8,8 +8,7 @@ import styles from './card.module.css'
 const Card: FunctionComponent<CardProps> = function () {
     return (
         <div className={styles.wrapper}>
-           {cardItems.cover}
-            <Image src={card} alt={''} />
+            <Image className={styles.img} src={card} alt={''} />
             <div className={styles.info}>
                 <h2 className={styles.title}>{cardItems.title}</h2>
                 <p className={styles.text}>{cardItems.name}</p>

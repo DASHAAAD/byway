@@ -1,10 +1,15 @@
 .wrapper {
+    padding: 24px;
+    width: 400px;
+    background-color: #fff;
 }
 
-.info {
+.img {
+    margin-bottom: 8px;
 }
 
 .title {
+    margin-bottom: 8px;
     font-weight: 400;
     font-size: 24px;
     line-height: 29px;
@@ -13,6 +18,7 @@
 }
 
 .text {
+    margin-bottom: 8px;
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
