@@ -1,5 +1,6 @@
 
 import Card from "@/components/card/Card";
+import CategoryCard from "@/components/categoryCard/CategoryCard";
 import Footer from "@/sections/Footer/Footer";
 import Header from "@/sections/Header/Header";
 
@@ -9,6 +10,7 @@ export default function Home() {
 
       <Header />
       <Card/>
+      <CategoryCard/>
      <Footer/>
 
     </main>

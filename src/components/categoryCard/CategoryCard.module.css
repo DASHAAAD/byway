@@ -1,0 +1,28 @@
+.wrapper {
+    padding: 24px;
+    width: 248px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+}
+
+.img {
+    margin-bottom: 24px;
+}
+
+.title {
+    margin-bottom: 8px;
+
+    font-size: 20px;
+    line-height: 24px;
+
+    color: rgba(0, 124, 101, 0.98);
+}
+
+.text {
+    font-size: 14px;
+    line-height: 17px;
+
+    color: rgba(28, 32, 36, 0.72);
+}
