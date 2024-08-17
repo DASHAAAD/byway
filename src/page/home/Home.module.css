@@ -9,7 +9,7 @@
 .advertisement {
     display: flex;
     justify-content: space-between;
-  align-items: center;
+    align-items: center;
 }
 
 .info {
@@ -48,4 +48,34 @@
 
 .button::after {
     content: ">";
+}
+
+.statistics {
+}
+
+.statisticsList {
+    display: flex;
+    justify-content: space-between;
+}
+
+.statisticsItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.statisticsTitle {
+    font-size: 32px;
+    line-height: 130%;
+    font-weight: 500;
+
+    color: #0f172a;
+}
+
+.statisticsText {
+    font-size: 14px;
+    line-height: 150%;
+
+    color: #0f172a;
 }

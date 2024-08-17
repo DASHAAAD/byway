@@ -25,6 +25,27 @@ const HomePage: FunctionComponent = () => {
                     <Image src={people} alt={''} />
                 </section>
 
+                <section className={`${styles.section} ${styles.statistics}`}>
+                    <ul className={styles.statisticsList}>
+                        <li className={styles.statisticsItem}>
+                            <h3 className={styles.statisticsTitle}>250+</h3>
+                            <p className={styles.statisticsText}>Courses by our best mentors</p>
+                        </li>
+                        <li className={styles.statisticsItem}>
+                            <h3 className={styles.statisticsTitle}>1000+</h3>
+                            <p className={styles.statisticsText}>Courses by our best mentors</p>
+                        </li>
+                        <li className={styles.statisticsItem}>
+                            <h3 className={styles.statisticsTitle}>15+</h3>
+                            <p className={styles.statisticsText}>Courses by our best mentors</p>
+                        </li>
+                        <li className={styles.statisticsItem}>
+                            <h3 className={styles.statisticsTitle}>2400+</h3>
+                            <p className={styles.statisticsText}>Courses by our best mentors</p>
+                        </li>
+                    </ul>
+                </section>
+
             </main>
 
             <Footer />
