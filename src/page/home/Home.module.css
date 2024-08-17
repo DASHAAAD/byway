@@ -20,7 +20,7 @@
     margin-bottom: 16px;
     font-size: 40px;
     line-height: 48px;
-
+    font-weight: 500;
     color: rgba(28, 32, 36, 0.92);
 }
 
@@ -50,15 +50,20 @@
     content: ">";
 }
 
-.statistics {
+.statistics,
+.courses,
+.categories,
+.instructors {
+    margin-bottom: 40px;
 }
 
-.statisticsList {
+.List {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.statisticsItem {
+.Item {
     display: flex;
     flex-direction: column;
     justify-content: center;

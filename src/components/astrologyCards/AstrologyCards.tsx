@@ -9,7 +9,7 @@ export const AstrologyCards: FunctionComponent<AstrologyProps> = function () {
         <div className={styles.wrapper}>
             <Image className={styles.image} src={astrology} alt={''} />
             <h2 className={styles.title}>{astrologyItems.title}</h2>
-            <p className={styles.text}>{astrologyItems.title}</p>
+            <p className={styles.text}>{astrologyItems.text}</p>
         </div>
     )
 }
