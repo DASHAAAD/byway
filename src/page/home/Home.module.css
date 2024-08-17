@@ -1,4 +1,5 @@
 .main {
+   padding-bottom: 40px;
     background-color: #fff;
 }
 
@@ -50,10 +51,7 @@
     content: ">";
 }
 
-.statistics,
-.courses,
-.categories,
-.instructors {
+.section {
     margin-bottom: 40px;
 }
 

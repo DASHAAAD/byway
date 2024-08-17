@@ -7,6 +7,9 @@ import styles from './Home.module.css'
 
 import people from '../../image/people.png'
 import Image from 'next/image'
+import man from '../../image/man.png'
+import manTwo from '../../image/man2.png'
+
 import { AstrologyCards } from '@/components/astrologyCards/AstrologyCards'
 import Card from '@/components/card/Card'
 import CategoryCard from '@/components/categoryCard/CategoryCard'
@@ -27,7 +30,7 @@ const HomePage: FunctionComponent = () => {
                     <Image src={people} alt={''} />
                 </section>
 
-                <section className={`${styles.section} ${styles.statistics}`}>
+                <section className={styles.section}>
                     <ul className={styles.List}>
                         <li className={styles.Item}>
                             <h3 className={styles.statisticsTitle}>250+</h3>
@@ -48,7 +51,7 @@ const HomePage: FunctionComponent = () => {
                     </ul>
                 </section>
 
-                <section className={styles.categories}>
+                <section className={styles.section}>
                     <h2 className={styles.title}>Top Categories</h2>
                     <ul className={styles.List}>
                         <li className={styles.Item}>
@@ -66,7 +69,7 @@ const HomePage: FunctionComponent = () => {
                     </ul>
                 </section>
 
-                <section className={styles.courses}>
+                <section className={styles.section}>
                     <h2 className={styles.title}>Top Courses</h2>
                     <ul className={styles.List}>
                         <li className={styles.Item}>
@@ -84,7 +87,7 @@ const HomePage: FunctionComponent = () => {
                     </ul>
                 </section>
 
-                <section className={styles.instructors}>
+                <section className={styles.section}>
                     <h2 className={styles.title}>Top Instructors</h2>
                     <ul className={styles.List}>
                         <li className={styles.Item}>
@@ -101,6 +104,26 @@ const HomePage: FunctionComponent = () => {
                         </li>
                     </ul>
                 </section>
+
+
+                <section className={`${styles.section} ${styles.advertisement}`}>
+                    <Image src={man} alt={''} />
+                    <div className={styles.info}>
+                        <h1 className={styles.title}>Become an Instructor</h1>
+                        <p className={styles.text}>Instructors from around the world teach millions of students on Byway. We provide the tools and skills to teach what you love.</p>
+                        <button className={styles.button}>Start your instructor journey</button>
+                    </div>
+                </section>
+
+                <section className={`${styles.section} ${styles.advertisement}`}>
+                    <div className={styles.info}>
+                        <h1 className={styles.title}>Transform your life through education</h1>
+                        <p className={styles.text}>Learners around the world are launching new careers, advancing in their fields, and enriching their lives.</p>
+                        <button className={styles.button}>Checkout courses</button>
+                    </div>
+                    <Image src={manTwo} alt={''} />
+                </section>
+
 
             </main>
 
