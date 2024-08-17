@@ -1,0 +1,50 @@
+.main {
+    background-color: #fff;
+}
+
+.section {
+    margin-bottom: 30px;
+}
+
+.advertisement {
+    display: flex;
+    justify-content: space-between;
+}
+
+.info {
+    width: 502px;
+}
+
+.title {
+    margin-bottom: 16px;
+    font-size: 40px;
+    line-height: 48px;
+
+    color: rgba(28, 32, 36, 0.92);
+}
+
+.text {
+    margin-bottom: 24px;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: rgba(28, 32, 36, 0.72);
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 24px;
+    gap: 8px;
+
+    width: 314px;
+    height: 48px;
+
+    background: #111113;
+}
+
+.button::after {
+    content: ">";
+}
