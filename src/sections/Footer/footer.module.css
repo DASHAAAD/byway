@@ -1,5 +1,15 @@
 .footer {
+    width: 100%;
+    background-color: rgba(24, 25, 27, 1);
+}
+
+.container {
+    width: 1280px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 80px;
+    padding-bottom: 80px;
     display: flex;
     align-content: center;
     justify-content: space-between;

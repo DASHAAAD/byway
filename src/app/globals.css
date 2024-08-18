@@ -23,7 +23,7 @@ body {
   font-size: 14px;
   line-height: 17px;
   color: rgba(237, 238, 240, 0.82);
-  background-color: #18191b;
+  /* background-color: #fff; */
 }
 
 @layer utilities {

@@ -1,6 +1,13 @@
-/* доделать */
-
 .header {
+    width: 100%;
+    background-color: rgba(24, 25, 27, 1);
+}
+
+.container {
+    width: 1280px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     padding-top: 16px;
     padding-bottom: 16px;
     display: flex;

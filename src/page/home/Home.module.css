@@ -1,10 +1,16 @@
 .main {
-   padding-bottom: 40px;
-    background-color: #fff;
+    padding-bottom: 40px;
 }
 
 .section {
-    margin-bottom: 30px;
+    padding-top: 40px;
+}
+
+.container {
+    width: 1280px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .advertisement {
@@ -18,7 +24,7 @@
 }
 
 .title {
-    margin-bottom: 16px;
+    margin-bottom: 40px;
     font-size: 40px;
     line-height: 48px;
     font-weight: 500;
@@ -62,6 +68,7 @@
 }
 
 .Item {
+    margin-bottom: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
