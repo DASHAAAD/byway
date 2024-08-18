@@ -55,7 +55,7 @@ const HomePage: FunctionComponent = () => {
                     <h2 className={styles.title}>Top Categories</h2>
                     <ul className={styles.List}>
                         <li className={styles.Item}>
-                            <AstrologyCards />
+                            <AstrologyCards/>
                         </li>
                         <li className={styles.Item}>
                             <AstrologyCards />
