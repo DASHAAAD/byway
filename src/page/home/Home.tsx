@@ -57,16 +57,16 @@ const HomePage: FunctionComponent = () => {
                         <h2 className={styles.title}>Top Categories</h2>
                         <ul className={styles.List}>
                             <li className={styles.Item}>
-                                <AstrologyCards />
+                                <AstrologyCards title='title' text='text' />
                             </li>
                             <li className={styles.Item}>
-                                <AstrologyCards />
+                                <AstrologyCards title='title' text='text' />
                             </li>
                             <li className={styles.Item}>
-                                <AstrologyCards />
+                                <AstrologyCards title='title' text='text' />
                             </li>
                             <li className={styles.Item}>
-                                <AstrologyCards />
+                                <AstrologyCards title='title' text='text' />
                             </li>
                         </ul>
                     </section>
@@ -75,16 +75,16 @@ const HomePage: FunctionComponent = () => {
                         <h2 className={styles.title}>Top Courses</h2>
                         <ul className={styles.List}>
                             <li className={styles.Item}>
-                                <Card />
+                                <Card title='title' name='name' price={0} />
                             </li>
                             <li className={styles.Item}>
-                                <Card />
+                                <Card title='title' name='name' price={0} />
                             </li>
                             <li className={styles.Item}>
-                                <Card />
+                                <Card title='title' name='name' price={0} />
                             </li>
                             <li className={styles.Item}>
-                                <Card />
+                                <Card title='title' name='name' price={0} />
                             </li>
                         </ul>
                     </section>
@@ -93,16 +93,16 @@ const HomePage: FunctionComponent = () => {
                         <h2 className={styles.title}>Top Instructors</h2>
                         <ul className={styles.List}>
                             <li className={styles.Item}>
-                                <CategoryCard />
+                                <CategoryCard title='title' text='text' />
                             </li>
                             <li className={styles.Item}>
-                                <CategoryCard />
+                                <CategoryCard title='title' text='text' />
                             </li>
                             <li className={styles.Item}>
-                                <CategoryCard />
+                                <CategoryCard title='title' text='text' />
                             </li>
                             <li className={styles.Item}>
-                                <CategoryCard />
+                                <CategoryCard title='title' text='text' />
                             </li>
                         </ul>
                     </section>
@@ -127,7 +127,7 @@ const HomePage: FunctionComponent = () => {
 
                 </main>
             </div>
-            
+
             <Footer />
         </div>
 
