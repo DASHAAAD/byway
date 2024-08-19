@@ -114,7 +114,7 @@ const HomePage: FunctionComponent = () => {
                         <div className={styles.info}>
                             <Title text='Become an Instructor' />
                             <p className={styles.text}>Instructors from around the world teach millions of students on Byway. We provide the tools and skills to teach what you love.</p>
-                            <button className={styles.button}>Start your instructor journey</button>
+                            <ButtonBlack text='Start your instructor journey' />
                         </div>
                     </section>
 
@@ -122,7 +122,7 @@ const HomePage: FunctionComponent = () => {
                         <div className={styles.info}>
                             <Title text='Transform your life through education' />
                             <p className={styles.text}>Learners around the world are launching new careers, advancing in their fields, and enriching their lives.</p>
-                            <button className={styles.button}>Checkout courses</button>
+                            <ButtonBlack text='Checkout courses' />
                         </div>
                         <Image src={manTwo} alt={''} />
                     </section>
