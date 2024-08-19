@@ -1,0 +1,17 @@
+.button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 24px;
+    gap: 8px;
+
+    width: 314px;
+    height: 48px;
+
+    background: #111113;
+}
+
+.button::after {
+    content: ">";
+}
