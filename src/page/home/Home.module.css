@@ -23,14 +23,6 @@
     width: 502px;
 }
 
-.title {
-    margin-bottom: 40px;
-    font-size: 40px;
-    line-height: 48px;
-    font-weight: 500;
-    color: rgba(28, 32, 36, 0.92);
-}
-
 .text {
     margin-bottom: 24px;
     font-size: 20px;
@@ -38,24 +30,6 @@
 
     color: rgba(28, 32, 36, 0.72);
 }
-
-/* .button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 24px;
-    gap: 8px;
-
-    width: 314px;
-    height: 48px;
-
-    background: #111113;
-}
-
-.button::after {
-    content: ">";
-} */
 
 .section {
     margin-bottom: 40px;
