@@ -9,6 +9,9 @@ import Image from 'next/image'
 
 
 const Form: FunctionComponent = () => {
+  const width = {
+    width: '500px'
+  }
   return (
     <>
       <Header />
@@ -20,7 +23,7 @@ const Form: FunctionComponent = () => {
             <input className={styles.input} type="text" placeholder='Email ID' />
             <h3 className={styles.title}>Password</h3>
             <input className={styles.input} type="text" placeholder='Enter Password' />
-            <ButtonBlack text='Sign in' />
+            <ButtonBlack style={width} text='Sign in' />
           </form>
         </div>
         <Image src={girl} alt={''} />

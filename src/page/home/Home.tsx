@@ -17,7 +17,7 @@ import ButtonBlack from '@/components/ButtonBlack/buttonBlack'
 import { Title } from '@/components/Title/Title'
 
 
-const HomePage: FunctionComponent = () => {
+const HomePage: FunctionComponent = (props) => {
     return (
         <div className={styles.wrapper}>
 
@@ -122,7 +122,7 @@ const HomePage: FunctionComponent = () => {
                         <div className={styles.info}>
                             <Title text='Transform your life through education' />
                             <p className={styles.text}>Learners around the world are launching new careers, advancing in their fields, and enriching their lives.</p>
-                            <ButtonBlack text='Checkout courses' />
+                            <ButtonBlack className={} text='Checkout courses' />
                         </div>
                         <Image src={manTwo} alt={''} />
                     </section>
