@@ -9,7 +9,8 @@ interface ButtonBlackProps {
 
 const ButtonBlack: FunctionComponent<ButtonBlackProps> = (props) => {
     return (
-        <button style={style} className={styles.button} >{props.text}</button>
+        // <button style={style} className={styles.button} >{props.text}</button>
+        <button className={styles.button} >{props.text}</button>
     )
 }
 

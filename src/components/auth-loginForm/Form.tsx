@@ -6,6 +6,7 @@ import Footer from '@/sections/Footer/Footer'
 import { Title } from '../Title/Title'
 import girl from '../../image/girl.png'
 import Image from 'next/image'
+import FormItem from '../formItem/FormItem'
 
 
 const Form: FunctionComponent = () => {
@@ -19,10 +20,8 @@ const Form: FunctionComponent = () => {
         <div className={styles.wrapper}>
           <Title text='Log in to your account' />
           <form className={styles.form} action="">
-            <h3 className={styles.title}>Email</h3>
-            <input className={styles.input} type="text" placeholder='Email ID' />
-            <h3 className={styles.title}>Password</h3>
-            <input className={styles.input} type="text" placeholder='Enter Password' />
+            <FormItem title='Email' text='Email ID' />
+            <FormItem title='Password' text='Enter Password' />
             <ButtonBlack style={width} text='Sign in' />
           </form>
         </div>

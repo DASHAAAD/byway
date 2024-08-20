@@ -2,13 +2,11 @@ import Footer from '@/sections/Footer/Footer'
 import Header from '@/sections/Header/Header'
 import React from 'react'
 
-const Authorization = () => {
+const Register = () => {
     return (
-        <div>
-            <Header />
-            <Footer />
-        </div>
+       <Header/>
+       <Footer/>           
     )
 }
 
-export default Authorization
+export default Register
