@@ -13,8 +13,9 @@ import manTwo from '../../image/man2.png'
 import { AstrologyCards } from '@/components/astrologyCards/AstrologyCards'
 import Card from '@/components/card/Card'
 import CategoryCard from '@/components/categoryCard/CategoryCard'
-import ButtonBlack from '@/components/ButtonBlack/buttonBlack'
+
 import { Title } from '@/components/Title/Title'
+import ButtonBlack from '@/components/ButtonBlack/ButtonBlack'
 
 
 const HomePage: FunctionComponent = (props) => {
@@ -33,7 +34,6 @@ const HomePage: FunctionComponent = (props) => {
                         </div>
                         <Image src={people} alt={''} />
                     </section>
-
                     <section className={styles.section}>
                         <ul className={styles.List}>
                             <li className={styles.Item}>

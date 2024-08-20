@@ -4,9 +4,9 @@ import { Title } from '@/components/Title/Title'
 import Footer from '@/sections/Footer/Footer'
 import Header from '@/sections/Header/Header'
 import React, { FunctionComponent } from 'react'
-import girl from '../../image/girl2.png'
 import Image from 'next/image'
-import styles from '../../components/auth-register/Register.module.css'
+import girl from '../../image/girl2.png'
+import styles from '../../page/auth-register/Register.module.css'
 
 const Register: FunctionComponent = () => {
     return (

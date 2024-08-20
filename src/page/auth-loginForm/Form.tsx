@@ -1,12 +1,15 @@
 import React, { FunctionComponent } from 'react'
 import styles from '../../components/auth-loginForm/Form.module.css'
-import ButtonBlack from '../ButtonBlack/buttonBlack'
+
 import Header from '@/sections/Header/Header'
 import Footer from '@/sections/Footer/Footer'
-import { Title } from '../Title/Title'
+
 import girl from '../../image/girl.png'
 import Image from 'next/image'
-import FormItem from '../formItem/FormItem'
+import FormItem from '@/components/formItem/FormItem'
+import { Title } from '@/components/Title/Title'
+import ButtonBlack from '@/components/ButtonBlack/buttonBlack'
+
 
 
 const Form: FunctionComponent = () => {
