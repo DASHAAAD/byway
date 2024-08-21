@@ -10,7 +10,7 @@ import styles from '../../page/auth-register/Register.module.css'
 
 const Register: FunctionComponent = () => {
     return (
-        <>
+        <section>
             <Header />
             <div className={styles.container}>
                 <Image src={girl} alt={''} />
@@ -25,7 +25,7 @@ const Register: FunctionComponent = () => {
                 </div>
             </div>
             <Footer />
-        </>
+        </section>
     )
 }
 

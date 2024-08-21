@@ -1,9 +1,11 @@
-import Register from "@/page/auth-register/Register";
+"use client";
+export * from "@mui/material";
+import DesignСourses from "@/page/Design-courses/DesignСourses";
 
 export default function Home() {
   return (
     <main className="bg-slate-500 flex flex-col h-screen justify-between">
-    <Register/>
+    <DesignСourses/>
     </main>
   );
 }
