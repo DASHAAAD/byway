@@ -1,7 +1,9 @@
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 
-const firebaseConfig = {
+import {getAuth} from 'firebase/auth'
+
+
+export const firebaseConfig = {
   apiKey: process.env.DB_APIKEY,
   authDomain:  process.env.DB_AUTHDOMAIN,
   databaseURL: process.env.DB_DATABESEURL,
@@ -13,4 +15,4 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+export const auth = getAuth(app)
