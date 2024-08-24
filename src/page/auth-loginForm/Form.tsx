@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import React, { FunctionComponent, useState } from 'react'
+import React, { FormEventHandler, FunctionComponent, useState } from 'react'
 import styles from '../../components/auth-loginForm/Form.module.css'
 import { auth } from '../../app/firebase'
 import Header from '@/sections/Header/Header'
@@ -24,8 +24,8 @@ const Form: FunctionComponent = () => {
   const width = {
     width: '500px'
   }
-  function register(e:React.ChangeEvent<HTMLInputElement>) {
-    e.preventDefault()
+  const register:  FormEventHandler<HTMLFormElement> =(event) => {
+    event.preventDefault()
     if (copyPassword !== password) {
       setError('passwords didnt match')
       return

@@ -1,12 +1,11 @@
-import React, { FunctionComponent, HTMLInputTypeAttribute } from 'react'
+import React, { FormEventHandler, FunctionComponent, HTMLInputTypeAttribute } from 'react'
 import styles from '../../components/formItem/FormItem.module.css'
 
 interface FormItemProps {
     title: string,
     text: string,
     value?:  HTMLInputTypeAttribute
-    onChange?: React.ChangeEventHandler
-    event?:React.ChangeEventHandler
+    // onChange?: FormEventHandler
 }
 
 const FormItem: FunctionComponent<FormItemProps> = (props) => {
