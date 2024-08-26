@@ -5,7 +5,7 @@ interface FormItemProps {
     title: string,
     text: string,
     value?:  HTMLInputTypeAttribute
-    // onChange?: FormEventHandler
+    onChange?: FormEventHandler
 }
 
 const FormItem: FunctionComponent<FormItemProps> = (props) => {

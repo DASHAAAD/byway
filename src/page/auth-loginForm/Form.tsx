@@ -1,7 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { FormEventHandler, FunctionComponent, useState } from 'react'
 import styles from '../../components/auth-loginForm/Form.module.css'
-import { auth } from '../../app/firebase'
 import Header from '@/sections/Header/Header'
 import Footer from '@/sections/Footer/Footer'
 
@@ -10,8 +9,10 @@ import Image from 'next/image'
 import FormItem from '@/components/formItem/FormItem'
 import { Title } from '@/components/Title/Title'
 import ButtonBlack from '@/components/ButtonBlack/buttonBlack'
-import { register } from 'module'
+// import { register } from 'module'
 import { createUserWithEmailAndPassword } from 'firebase/auth'
+import { auth } from '@/app/firebase';
+import { request } from 'http'
 
 const [email, setEmail] = useState('')
 
@@ -19,12 +20,20 @@ const [password, setPassword] = useState('')
 const [copyPassword, setCopyPassword] = useState('')
 const [error, setError] = useState('')
 
+interface formProps {
+  onSubmit: FormEventHandler
+}
+
+let formPropsEl: formProps = {
+  onSubmit: request
+}
+
 const Form: FunctionComponent = () => {
-  
+
   const width = {
     width: '500px'
   }
-  const register:  FormEventHandler<HTMLFormElement> =(event) => {
+  function register(event: React.MouseEvent<HTMLButtonElement>) {
     event.preventDefault()
     if (copyPassword !== password) {
       setError('passwords didnt match')
@@ -39,15 +48,18 @@ const Form: FunctionComponent = () => {
 
       })
   }
+  const onChange = (event: React.MouseEvent<HTMLButtonElement>) => {
+    setEmail(event.currentTarget.value)
+  }
   return (
     <>
       <Header />
       <div className={styles.container}>
         <div className={styles.wrapper}>
           <Title text='Log in to your account' />
-          <form onSubmit={register} className={styles.form} action="">
+          <form className={styles.form} action="">
             <FormItem value={email}
-            // onChange={()}
+              onChange={onChange}
               title='Email'
               text='Email ID'
             />

@@ -3,7 +3,7 @@ import { initializeApp } from "firebase/app";
 import {getAuth} from 'firebase/auth'
 
 
-export const firebaseConfig = {
+const firebaseConfig = {
   apiKey: process.env.DB_APIKEY,
   authDomain:  process.env.DB_AUTHDOMAIN,
   databaseURL: process.env.DB_DATABESEURL,

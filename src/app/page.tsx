@@ -1,7 +1,7 @@
 "use client";
 export * from "@mui/material";
 import DesignСourses from "@/page/Design-courses/DesignСourses";
-import './firebase'
+import '../../firebase'
 
 export default function Home () {
   return (
