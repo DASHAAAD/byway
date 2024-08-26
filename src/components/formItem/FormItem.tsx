@@ -1,22 +1,25 @@
-import React, { FunctionComponent } from 'react'
 import styles from '../../components/formItem/FormItem.module.css'
 
- export interface FormItemProps {
-    title: string,
-    text: string,
-    type: string
-    email?: string,
-    password?: string,
-    copyPassword?: string,
-    error?: string
+const CustomInput = (props: React.HTMLProps<HTMLInputElement>) => {
+    const onChange: React.ChangeEventHandler<HTMLInputElement> = (e) => {
+        console.log(e.target.value)
+    }
+    return (
+        <input
+            onChange={onChange}
+            className={styles.input}
+            {...props}
+        />
+    )
 }
 
-const FormItem: FunctionComponent<FormItemProps> = (props) => {
+function FormItem() {
     return (
-        <div>
-            <h3 className={styles.title}>{props.title}</h3>
-            <input className={styles.input} type="text" placeholder={props.text} value={props.value} />
-        </div>
+        <>
+            <CustomInput
+             
+            />
+        </>
     )
 }
 

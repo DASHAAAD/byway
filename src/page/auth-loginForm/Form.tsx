@@ -11,7 +11,7 @@ import FormItem from '@/components/formItem/FormItem'
 import { Title } from '@/components/Title/Title'
 import ButtonBlack from '@/components/ButtonBlack/ButtonBlack'
 
-import { FormItemProps } from '@/components/formItem/FormItem'
+// import { FormItemProps } from '@/components/formItem/FormItem'
 
 
 
@@ -33,15 +33,16 @@ const Form: FunctionComponent = () => {
         <div className={styles.wrapper}>
           <Title text='Log in to your account' />
           <form className={styles.form} action="">
-            <FormItem
-              type={email}
-              title='Email'
-              text='Email ID'
+            <FormItem 
+            
+              // title='Email'
+              // text='Email ID'
             />
             <FormItem
-              type={password}
-              title='Password'
-              text='Enter Password' />
+              // type={password}
+              // title='Password'
+              // text='Enter Password'
+               />
             <ButtonBlack style={width} text='Sign in' />
           </form>
         </div>
