@@ -16,11 +16,9 @@ import ButtonBlack from '@/components/ButtonBlack/ButtonBlack'
 
 
 const Form: FunctionComponent = () => {
- 
-  // const [email, setEmail] = useState<FormItemProps>
-  // const [password, setPassword] = useState<FormItemProps>
-  // const [copyPassword, setCopyPassword] = useState<UseStateProps>
-  // const [error, setError] = useState<UseStateProps>
+
+  const [email, setEmail] = useState<string | null>(null)
+  const [password, setPassword] = useState<string | null>(null)
 
   const width = {
     width: '500px'
@@ -33,16 +31,12 @@ const Form: FunctionComponent = () => {
         <div className={styles.wrapper}>
           <Title text='Log in to your account' />
           <form className={styles.form} action="">
-            <FormItem 
-            
-              // title='Email'
-              // text='Email ID'
+            <FormItem
+              onChange={(e) => setEmail(e.currentTarget.value)}
             />
             <FormItem
-              // type={password}
-              // title='Password'
-              // text='Enter Password'
-               />
+
+            />
             <ButtonBlack style={width} text='Sign in' />
           </form>
         </div>
