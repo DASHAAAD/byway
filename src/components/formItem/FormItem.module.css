@@ -5,16 +5,14 @@
     line-height: 160%;
     color: #0f172a;
 }
-
-.input:first-child {
-    margin-bottom: 400px;
-}
-
+ 
 .input {
     margin-bottom: 24px;
     padding: 16px;
     width: 620px;
     height: 58px;
+    color: #000000;
+    font-size: 16px;
     border: 1px solid #e2e8f0;
     border-radius: 8px;
 }
