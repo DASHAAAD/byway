@@ -1,0 +1,70 @@
+.title {
+  margin-bottom: 40px;
+
+  font-family: "Fira Sans Condensed";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 48px;
+
+  color: rgba(28, 32, 36, 0.92);
+}
+
+
+/* twoColumn */
+
+.twoColumn {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 40px;
+}
+
+
+.titleItem {
+  font-family: "Fira Sans Condensed";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+
+  color: rgba(28, 32, 36, 0.92);
+}
+
+.textItem {
+  font-family: "Fira Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+
+  color: rgba(28, 32, 36, 0.92);
+}
+
+.wrapperItem {
+/* column */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 24px;
+gap: 24px;
+
+width: 620px;
+height: 158px;
+
+background: #F9F9FB;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 1;
+
+}
+
+
+/* картинка с девочкой и текст */
+
+.height {
+    height: 100%;
+}
