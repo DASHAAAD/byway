@@ -1,22 +1,35 @@
-import React, { FunctionComponent, ReactElement, ReactNode } from 'react'
+import React, { FunctionComponent } from 'react'
 
 
 type Props = {
-    left: React.ReactNode,
-    right: React.ReactNode,
+    Left?: React.ReactNode,
+    Right?: React.ReactNode,
+    className?: React.CSSProperties
+    children?: React.ReactNode
+}
+
+
+export const WrapperFlex: FunctionComponent<Props> = ({
+    children
+}) => {
+    return (
+        <div className='flex'>
+            {children}
+        </div>
+    )
 }
 
 export const LayoutFlex: FunctionComponent<Props> = ({
-    left: Left,
-    right: Right
+    Left,
+    Right,
 }) => {
     return (
-        <div>
-            <div>
+        <>
+            <WrapperFlex>
                 {Left}
-            </div>
-            {Right}
-        </div>
+                {Right}
+            </WrapperFlex>
+        </>
     )
 }
 

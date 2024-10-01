@@ -1,24 +1,25 @@
-import React, { FunctionComponent } from 'react'
-
+import React, { FunctionComponent, ReactNode } from 'react'
 import { LayoutFlex } from './LayoutFlex'
 
-const LeftElement = () => {
+import styles from '../../LayoutComponents/LayoutFlex/testCss.module.css'
+
+//test
+
+const LayoutFlexPage: FunctionComponent = ({
+}) => {
     return (
-        <div>
-            <h1>left</h1>
-            <p>text</p>
-        </div>
+        <LayoutFlex Left={
+            <>
+                <h1 className={styles.text}>LeftElement</h1>
+            </>
+        }
+            Right={
+                <>
+                    <h1 className={styles.text}>RightElement</h1>
+                </>
+            }
+        />
     )
 }
 
-export const LayoutFlexPage: FunctionComponent = () => {
-    return (
-        <div>
-            <LayoutFlex
-                left={LeftElement}
-                right={undefined}>
-
-            </LayoutFlex>
-        </div>
-    )
-}
+export default LayoutFlexPage
