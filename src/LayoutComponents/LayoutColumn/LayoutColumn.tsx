@@ -1,12 +1,13 @@
 import React, { FunctionComponent, HTMLAttributes, ReactNode } from 'react'
-import styled from 'styled-components';
+import styled, { Interpolation } from "styled-components";
 
 export type TextProps = {
     children: React.ReactNode;
-    styles?: React.CSSProperties;
+    styles?: Interpolation<React.CSSProperties>
 };
 
 const Component = styled.p<TextProps>`
+ ${({ styles }) => styles}
   color: red;
 `;
 
