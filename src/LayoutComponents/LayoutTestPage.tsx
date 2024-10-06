@@ -114,7 +114,6 @@ const SectionFive: FunctionComponent = () => {
             {<>
                 <h1
                     style={{
-                        width: '500px',
                         fontWeight: '500',
                         fontSize: '40px',
                         lineHeight: '48px',
@@ -123,7 +122,6 @@ const SectionFive: FunctionComponent = () => {
                 >Это - шаблон секции из одной колонки</h1>
                 <p
                     style={{
-                        width: '500px',
                         fontWeight: '500',
                         fontSize: '40px',
                         lineHeight: '48px',
