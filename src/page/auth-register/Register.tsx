@@ -18,12 +18,16 @@ const Register: FunctionComponent = () => {
     const [error, setError] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+
     const [repeatPassword, setRepeatPassword] = useState("");
+
+    const [placeholder, setPlaceholder] = useState({
+        email: 'Email',
+        password: 'password',
+    });
 
     const onSubmit = async (event: { preventDefault: () => void }) => {
         event.preventDefault();
-
-        // validate the inputs
         if (!email || !password || !repeatPassword) {
             setError("Please fill out all the fields.");
             return;
@@ -32,8 +36,6 @@ const Register: FunctionComponent = () => {
             setError("Passwords do not match");
             return;
         }
-
-        // clear the errors
         setError("");
 
         // TODO: send the register request
@@ -53,16 +55,24 @@ const Register: FunctionComponent = () => {
                             placeholder='Name'
                         />
                         <Input
-                            title='Email'
-                            placeholder='Email'
-                            value={email}
-                            onChange={(e) => setEmail(e.currentTarget.value)}
+                            placeholder={placeholder.email}
+                            // value={email}
+                            onChange={(e) => {
+                                setPlaceholder({
+                                    ...placeholder,
+                                    email: (e.target as HTMLInputElement).value,
+                                });
+                            }}
                         />
                         <Input
-                            title='password'
-                            placeholder='password'
-                            onChange={(e) => setPassword(e.currentTarget.value)}
-                            value={password}
+                            placeholder={placeholder.password}
+                            onChange={(e) => {
+                                setPlaceholder({
+                                    ...placeholder,
+                                    password: (e.target as HTMLInputElement).value,
+                                });
+                            }}
+                            // value={password}
                         />
                         <ButtonBlack text='Create account' />
                     </form>
