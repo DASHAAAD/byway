@@ -1,0 +1,17 @@
+:colors {
+  --scheme-dark-primary: #edeef0;
+  --scheme-dark-Secondary: #edeef0;
+  --scheme-dark-Neutral-Tertiary: #edeef0;
+
+  --scheme-dark-Kelp-Primary: rgba(11, 216, 182, 0.98);
+  --scheme-dark-Kelp-Secondary: rgba(11, 216, 182, 0.84);
+  --scheme-dark-Kelp-Tertiary: rgba(11, 216, 182, 0.72);
+
+  --scheme-dark-Salt-Primary: rgba(76, 204, 230, 0.96);
+  --scheme-dark-Salt-Secondary: rgba(76, 204, 230, 0.84);
+  --scheme-dark-Salt-Tertiary: rgba(76, 204, 230, 0.72);
+
+  --scheme-dark-Vista-Primary: rgba(158, 177, 255, 0.96);
+  --scheme-dark-Vista-Secondary: rgba(158, 177, 255, 0.84);
+  --scheme-dark-Vista-Tertiary: rgba(158, 177, 255, 0.72);
+}
