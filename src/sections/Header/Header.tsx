@@ -7,7 +7,7 @@ import search from '../../image/search.png'
 
 import styles from '../Header/header.module.css'
 
-const Header: FunctionComponent = () => {
+const Header = ({...props}:React.JSX.Element) => {
     return (
         <header className={styles.header}>
             <div className={styles.container}>
