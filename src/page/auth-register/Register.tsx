@@ -44,7 +44,7 @@ const Register: FunctionComponent = () => {
 
     return (
         <section>
-            <Header />
+            <Header key={null} type={undefined} props={undefined} />
             <div className={styles.container}>
                 <Image src={girl} alt={''} />
                 <div className={styles.wrapper}>
