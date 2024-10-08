@@ -13,7 +13,6 @@ import { Input } from '@/components/formItem/FormItem'
 import ButtonBlack from '@/components/ButtonBlack/ButtonBlack'
 
 
-
 const Register: FunctionComponent = () => {
     const [error, setError] = useState("");
     const [email, setEmail] = useState("");
