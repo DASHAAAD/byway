@@ -1,0 +1,12 @@
+
+:fonts {
+--font-fira-sans-Condensed: 'Fira Sans Condensed' , sans-serif
+
+}
+
+:weight {
+    --font-weight-Light: 300,
+    --font-weight-Regular: 400,
+    --font-weight-Medium : 500,
+    --font-weight-Bold 700
+}
