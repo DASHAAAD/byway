@@ -1,22 +1,31 @@
 import React, { FunctionComponent } from 'react'
 import { ReactNode, CSSProperties } from 'react';
+
 import styles from '../../components/buttonBlack/buttonBlack.module.css'
 
+
 interface ButtonBlackProps {
-    text: string
+    text?: string
     style?: React.CSSProperties
-    
+    label?: string;
+    onClick?: () => void;
+    backgroundColor?: string;
+
 }
 
-const onClickButton = () => {
-    return (
-        console.log('типизация кнопки')
-    )
-}
+// const onClickButton = () => {
+//     return (
+//         console.log('типизация кнопки')
+//     )
+// }
 
-const ButtonBlack: FunctionComponent<ButtonBlackProps> = (props) => {
+export const ButtonBlack = ({
+    ...props
+}: ButtonBlackProps) => {
     return (
-        <button onClick={onClickButton} className={styles.button} >{props.text}</button>
+        <button 
+        {...props}
+        >{props.text}</button>
     )
 }
 
