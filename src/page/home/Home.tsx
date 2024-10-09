@@ -16,43 +16,63 @@ import CategoryCard from '@/components/categoryCard/CategoryCard'
 
 import { Title } from '@/components/Title/Title'
 import ButtonBlack from '@/components/ButtonBlack/ButtonBlack'
+import { LayoutFlex } from '@/LayoutComponents/LayoutFlex/LayoutFlex'
+import LayoutColumn from '@/LayoutComponents/LayoutColumn/LayoutColumn'
 
 
 const HomePage: FunctionComponent = (props) => {
     return (
         <div className={styles.wrapper}>
 
-            <Header />
+            <Header key={null} type={undefined} props={undefined} />
             <div className={styles.container}>
                 <main className={styles.main}>
 
                     <section className={`${styles.section} ${styles.advertisement}`}>
-                        <div className={styles.info}>
-                            <Title text='Unlock Your Potential with Byway' />
-                            <p className={styles.text}>Welcome to Byway, where learning knows no bounds. We believe that education is the key to personal and professional growth, and we re here to guide you on your journey to success. </p>
-                            <ButtonBlack text='Start your instructor journey' />
-                        </div>
-                        <Image src={people} alt={''} />
+                        <LayoutFlex
+                            Left={
+                                <div className={styles.info}>
+                                    <Title text='Unlock Your Potential with Byway' />
+                                    <div className={styles.text}>Welcome to Byway, where learning knows no bounds. We believe that education is the key to personal and professional growth, and we re here to guide you on your journey to success. </div>
+                                    <ButtonBlack text='Start your instructor journey' />
+                                </div>
+                            }
+                            Right={
+                                <Image src={people} alt={''} />
+                            }
+                        />
                     </section>
-                    <section className={styles.section}>
-                        <ul className={styles.List}>
-                            <li className={styles.Item}>
-                                <h3 className={styles.statisticsTitle}>250+</h3>
-                                <p className={styles.statisticsText}>Courses by our best mentors</p>
-                            </li>
-                            <li className={styles.Item}>
-                                <h3 className={styles.statisticsTitle}>1000+</h3>
-                                <p className={styles.statisticsText}>Courses by our best mentors</p>
-                            </li>
-                            <li className={styles.Item}>
+
+                    <section>
+
+                        <LayoutFlex className={styles.List}>
+
+                            <LayoutColumn className={styles.Item}>
+
                                 <h3 className={styles.statisticsTitle}>15+</h3>
                                 <p className={styles.statisticsText}>Courses by our best mentors</p>
-                            </li>
-                            <li className={styles.Item}>
+
+                            </LayoutColumn>
+                            <LayoutColumn className={styles.Item}>
+
+                                <div className={styles.statisticsTitle}>1000+</div>
+                                <div className={styles.statisticsText}>Courses by our best mentors</div>
+
+                            </LayoutColumn>
+                            <LayoutColumn className={styles.Item}>
+
+                                <h3 className={styles.statisticsTitle}>15+</h3>
+                                <p className={styles.statisticsText}>Courses by our best mentors</p>
+
+                            </LayoutColumn>
+                            <LayoutColumn className={styles.Item}>
+
                                 <h3 className={styles.statisticsTitle}>2400+</h3>
                                 <p className={styles.statisticsText}>Courses by our best mentors</p>
-                            </li>
-                        </ul>
+
+                            </LayoutColumn>
+                        </LayoutFlex>
+
                     </section>
 
                     <section className={styles.section}>
@@ -122,7 +142,7 @@ const HomePage: FunctionComponent = (props) => {
                         <div className={styles.info}>
                             <Title text='Transform your life through education' />
                             <p className={styles.text}>Learners around the world are launching new careers, advancing in their fields, and enriching their lives.</p>
-                            <ButtonBlack className={} text='Checkout courses' />
+                            <ButtonBlack text='Checkout courses' />
                         </div>
                         <Image src={manTwo} alt={''} />
                     </section>

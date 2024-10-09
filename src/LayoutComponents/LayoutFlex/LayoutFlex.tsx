@@ -1,19 +1,20 @@
-import React, { FunctionComponent } from 'react'
-
+import React, { FunctionComponent, HTMLAttributes, ReactNode } from 'react'
+import styled, { Interpolation } from "styled-components";
 
 type Props = {
     Left?: React.ReactNode,
     Right?: React.ReactNode,
-    className?: React.CSSProperties
-    children?: React.ReactNode
+    children?: React.ReactNode,
+    className?: string
 }
 
 
-export const WrapperFlex: FunctionComponent<Props> = ({
-    children
-}) => {
+export const WrapperFlex = ({
+    children,
+    className
+}: Props) => {
     return (
-        <div className='flex'>
+        <div className={className} >
             {children}
         </div>
     )
@@ -22,14 +23,18 @@ export const WrapperFlex: FunctionComponent<Props> = ({
 export const LayoutFlex: FunctionComponent<Props> = ({
     Left,
     Right,
+    children,
+    className=''
+
 }) => {
     return (
-        <>
-            <WrapperFlex>
-                {Left}
-                {Right}
-            </WrapperFlex>
-        </>
+
+        <WrapperFlex className={className}>
+            {Left}
+            {Right}
+            {children}
+        </WrapperFlex>
+
     )
 }
 

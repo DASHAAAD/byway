@@ -2,7 +2,7 @@ import React, { FunctionComponent } from 'react'
 import { ReactNode, CSSProperties } from 'react';
 
 import styles from '../../components/buttonBlack/buttonBlack.module.css'
-
+import { clsx } from 'clsx';
 
 interface ButtonBlackProps {
     text?: string
