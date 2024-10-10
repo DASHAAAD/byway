@@ -29,7 +29,7 @@ const HomePage: FunctionComponent = (props) => {
                 <main className={styles.main}>
 
                     <section className={`${styles.section} ${styles.advertisement}`}>
-                        <LayoutFlex
+                        <LayoutFlex className='flex'
                             Left={
                                 <div className={styles.info}>
                                     <Title text='Unlock Your Potential with Byway' />
@@ -77,74 +77,103 @@ const HomePage: FunctionComponent = (props) => {
 
                     <section className={styles.section}>
                         <Title text='Top Categories' />
-                        <ul className={styles.List}>
-                            <li className={styles.Item}>
+                        <div className={styles.List}>
+                            <LayoutColumn>
                                 <AstrologyCards title='title' text='text' />
-                            </li>
-                            <li className={styles.Item}>
+                            </LayoutColumn>
+                            <LayoutColumn>
                                 <AstrologyCards title='title' text='text' />
-                            </li>
-                            <li className={styles.Item}>
+                            </LayoutColumn>
+                            <LayoutColumn>
                                 <AstrologyCards title='title' text='text' />
-                            </li>
-                            <li className={styles.Item}>
+                            </LayoutColumn>
+                            <LayoutColumn>
                                 <AstrologyCards title='title' text='text' />
-                            </li>
-                        </ul>
+                            </LayoutColumn>
+                            <LayoutColumn>
+                                <AstrologyCards title='title' text='text' />
+                            </LayoutColumn>
+                        </div>
                     </section>
 
                     <section className={styles.section}>
                         <Title text='Top Courses' />
-                        <ul className={styles.List}>
-                            <li className={styles.Item}>
+                        <div className={styles.List}>
+                            <LayoutColumn>
                                 <Card title='title' name='name' price={0} />
-                            </li>
-                            <li className={styles.Item}>
+                            </LayoutColumn>
+                            <LayoutColumn>
                                 <Card title='title' name='name' price={0} />
-                            </li>
-                            <li className={styles.Item}>
+                            </LayoutColumn>
+                            <LayoutColumn>
                                 <Card title='title' name='name' price={0} />
-                            </li>
-                            <li className={styles.Item}>
+                            </LayoutColumn>
+                            <LayoutColumn>
                                 <Card title='title' name='name' price={0} />
-                            </li>
-                        </ul>
+                            </LayoutColumn>
+                            <LayoutColumn>
+                                <Card title='title' name='name' price={0} />
+                            </LayoutColumn>
+                        </div>
                     </section>
 
                     <section className={styles.section}>
                         <Title text='Top Courses' />
-                        <ul className={styles.List}>
-                            <li className={styles.Item}>
-                                <CategoryCard title='title' text='text' />
-                            </li>
-                            <li className={styles.Item}>
-                                <CategoryCard title='title' text='text' />
-                            </li>
-                            <li className={styles.Item}>
-                                <CategoryCard title='title' text='text' />
-                            </li>
-                            <li className={styles.Item}>
-                                <CategoryCard title='title' text='text' />
-                            </li>
-                        </ul>
-                    </section>
-
-                    <section className={`${styles.section} ${styles.advertisement}`}>
-                        <Image src={man} alt={''} />
-                        <div className={styles.info}>
-                            <Title text='Become an Instructor' />
-                            <p className={styles.text}>Instructors from around the world teach millions of students on Byway. We provide the tools and skills to teach what you love.</p>
-                            <ButtonBlack text='Start your instructor journey' />
+                        <div className={styles.List}>
+                            <LayoutColumn>
+                                <div className={styles.Item}>
+                                    <CategoryCard title='title' text='text' />
+                                </div>
+                            </LayoutColumn>
+                            <LayoutColumn>
+                                <div className={styles.Item}>
+                                    <CategoryCard title='title' text='text' />
+                                </div>
+                            </LayoutColumn>
+                            <LayoutColumn>
+                                <div className={styles.Item}>
+                                    <CategoryCard title='title' text='text' />
+                                </div>
+                            </LayoutColumn>
+                            <LayoutColumn>
+                                <div className={styles.Item}>
+                                    <CategoryCard title='title' text='text' />
+                                </div>
+                            </LayoutColumn>
+                            <LayoutColumn>
+                                <div className={styles.Item}>
+                                    <CategoryCard title='title' text='text' />
+                                </div>
+                            </LayoutColumn>
                         </div>
                     </section>
 
-                    <section className={`${styles.section} ${styles.advertisement}`}>
-                        <div className={styles.info}>
-                            <Title text='Transform your life through education' />
-                            <p className={styles.text}>Learners around the world are launching new careers, advancing in their fields, and enriching their lives.</p>
-                            <ButtonBlack text='Checkout courses' />
-                        </div>
-                        <Image src={manTwo} alt={''} />
+                    <section>
+                        <LayoutFlex className={styles.List}
+                            Left={<Image src={man} alt={''} />}
+                            Right={
+                                <div className={styles.info}>
+                                    <Title text='Become an Instructor' />
+                                    <p className={styles.text}>Instructors from around the world teach millions of students on Byway. We provide the tools and skills to teach what you love.</p>
+                                    <ButtonBlack text='Start your instructor journey' />
+                                </div>
+                            }
+                        />
+                    </section>
+
+                    <section>
+                        <LayoutFlex className={styles.List}
+                            Left={
+                                <div className={styles.info}>
+                                    <Title text='Transform your life through education' />
+                                    <p className={styles.text}>Learners around the world are launching new careers, advancing in their fields, and enriching their lives.</p>
+                                    <ButtonBlack text='Checkout courses' />
+                                </div>
+                            }
+                            Right={
+                                <Image src={manTwo} alt={''} />
+                            }
+                        />
                     </section>
 
                 </main>
