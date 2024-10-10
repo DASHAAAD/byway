@@ -6,7 +6,8 @@ import clsx from 'clsx'
 interface InputProps extends React.HTMLProps<HTMLInputElement> {
 
 }
-export const Input: React.FC<InputProps> = ({
+
+const Input: React.FC<InputProps> = ({
     className,
     title,
     ...props
@@ -18,4 +19,6 @@ export const Input: React.FC<InputProps> = ({
         className={clsx(className, styles.input)}
     />
 )
+
+export default Input
 
