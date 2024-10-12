@@ -9,7 +9,7 @@
     width: 314px;
     height: 48px;
 
-    background: #111113;
+    background: var(--text--color--dark);
 }
 
 .button::after {

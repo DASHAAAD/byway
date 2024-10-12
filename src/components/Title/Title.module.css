@@ -3,5 +3,5 @@
     font-size: 40px;
     line-height: 48px;
     font-weight: 500;
-    color: rgba(28, 32, 36, 0.92);
+    color: var(--scheme-dark-Kelp-Primary);
 }

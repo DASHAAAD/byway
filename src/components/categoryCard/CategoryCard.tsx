@@ -1,9 +1,18 @@
 import React, { FunctionComponent } from 'react'
 import Image from 'next/image'
-import { cardItems, categoryProps } from './CategoryCard-props'
 import icon from '../../image/categoryIcon.png'
 
 import styles from './CategoryCard.module.css'
+
+export const cardItems: categoryProps = {
+  title: 'Ronald Richards',
+  text: 'UI/UX Designer'
+}
+
+export type categoryProps = {
+  title: string,
+  text: string
+}
 
 const CategoryCard: FunctionComponent<categoryProps> = function () {
   return (

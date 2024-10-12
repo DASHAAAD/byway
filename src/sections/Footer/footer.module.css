@@ -1,6 +1,6 @@
 .footer {
     width: 100%;
-    background-color: rgba(24, 25, 27, 1);
+    background-color: var(--text--color--dark);
 }
 
 .container {

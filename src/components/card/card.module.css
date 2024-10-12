@@ -3,7 +3,7 @@
     width: 400px;
     background-color: #fff;
 
-    border: 1px solid rgba(73, 88, 198, 0.64);
+    border: 1px solid var(--scheme-dark-Vista-Primary);
 }
 
 .img {
@@ -16,7 +16,7 @@
     font-size: 24px;
     line-height: 29px;
 
-    color: rgba(73, 88, 198, 0.96);
+    color: var(--scheme-dark-Vista-Primary);
 }
 
 .text {
@@ -25,7 +25,7 @@
     font-size: 20px;
     line-height: 24px;
 
-    color: rgba(28, 32, 36, 0.72);
+    color: var(--text--color--dark);
 }
 
 .price {
@@ -33,5 +33,5 @@
     font-size: 20px;
     line-height: 24px;
 
-    color: rgba(73, 88, 198, 0.96);
+    color: var(--scheme-dark-Vista-Primary);
 }

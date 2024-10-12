@@ -6,7 +6,7 @@
     align-items: center;
     background-color: #fff;
 
-    border: 1px solid rgba(73, 88, 198, 0.64);
+    border: 1px solid var(--scheme-dark-Kelp-Secondary);
 }
 
 .img {
@@ -19,12 +19,12 @@
     font-size: 20px;
     line-height: 24px;
 
-    color: rgba(0, 124, 101, 0.98);
+    color: var(--scheme-dark-Kelp-Primary);
 }
 
 .text {
     font-size: 14px;
     line-height: 17px;
 
-    color: rgba(28, 32, 36, 0.72);
+    color: var(--scheme-dark-Kelp-Tertiary);
 }

@@ -3,7 +3,7 @@
     font-weight: 600;
     font-size: 18px;
     line-height: 160%;
-    color: #0f172a;
+    color: var(--text--color--dark);
 }
  
 .input {
@@ -11,8 +11,8 @@
     padding: 16px;
     width: 620px;
     height: 58px;
-    color: #000000;
+    color: var(--title-color-dark);
     font-size: 16px;
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--scheme-dark-Secondary);
     border-radius: 8px;
 }

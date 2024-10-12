@@ -2,12 +2,26 @@ Background
 Surface
 Overlay
 
-:colors {
+
+/* text */
+p,
+h1,
+h2,
+h3,
+a, 
+div, 
+html {
+  --text--color--dark: rgba(17, 17, 19, 1);
+  --title-color-dark: rgba(0, 0, 0, 100);
+}
+
+/* bg */
+html {
   --scheme-dark-primary: #edeef0;
   --scheme-dark-Secondary: #edeef0;
   --scheme-dark-Neutral-Tertiary: #edeef0;
 
-  --scheme-dark-Kelp-Primary: rgba(11, 216, 182, 0.98);
+  --scheme-dark-Kelp-Primary: rgba(22, 24, 23, 0.98);
   --scheme-dark-Kelp-Secondary: rgba(11, 216, 182, 0.84);
   --scheme-dark-Kelp-Tertiary: rgba(11, 216, 182, 0.72);
 
