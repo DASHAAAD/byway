@@ -2,6 +2,6 @@
     margin-bottom: 40px;
     font-size: 40px;
     line-height: 48px;
-    font-weight: 500;
-    color: var(--scheme-dark-Kelp-Primary);
+    font-weight: var(--font-weight-Medium);
+    color: var(--text--color--dark);
 }

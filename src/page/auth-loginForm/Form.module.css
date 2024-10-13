@@ -9,7 +9,7 @@
 }
 
 .title {
-  font-weight: 600;
+  font-weight: var(--font-weight-Medium);
   font-size: 18px;
   line-height: 160%;
   color: var(--text--color--dark);

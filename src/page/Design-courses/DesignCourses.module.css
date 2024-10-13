@@ -20,7 +20,7 @@
 
     width: 112px;
     height: 48px;
-    color: #0f172a;
+    color: var(--scheme-dark-Kelp-Primary);
     background: #ffffff;
 
     border: 1px solid var(--scheme-dark-Kelp-Primary);
@@ -36,7 +36,7 @@
     font-size: 16px;
     line-height: 160%;
 
-    color: #0f172a;
+    color: var(--scheme-dark-Kelp-Primary);
 }
 
 .relevance {
@@ -47,7 +47,7 @@
 
     width: 147px;
     height: 48px;
-    color: #0f172a;
+    color: var(--scheme-dark-Kelp-Primary);
     background: #ffffff;
 
     border: 1px solid var(--scheme-dark-Kelp-Primary);
