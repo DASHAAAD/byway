@@ -1,21 +1,31 @@
-import React, { FunctionComponent } from 'react'
+import React, { createContext, FunctionComponent, useContext } from 'react'
 import Image from 'next/image'
-import { cardItems, CardProps } from './card-props'
+// import { cardItems, CardProps } from './card-props'
 import card from '../../image/card.png'
 
 import styles from './card.module.css'
 
-const Card: FunctionComponent<CardProps> = function () {
+export const Card = () => {
+    let initialValue = {
+        titleText: `Beginner’s Guide to Design`,
+        name: `By Ronald Richards`,
+        price: `$149.9`
+    };
+    const Context = createContext(initialValue);
+    let { titleText, name, price } = useContext(Context);
+
     return (
-        <div className={styles.wrapper}>
-            <Image className={styles.img} src={card} alt={''} />
-            <div className={styles.info}>
-                <h2 className={styles.title}>{cardItems.title}</h2>
-                <p className={styles.text}>{cardItems.name}</p>
-                <span className={styles.price}>{cardItems.price}</span>
+        <Context.Provider value={initialValue}>
+            <div className={styles.wrapper}>
+                <Image className={styles.img} src={card} alt={''} />
+                <div className={styles.info}>
+                    <h2 className={styles.titlestyle}>{titleText}</h2>
+                    <p className={styles.text}>{name}</p>
+                    <span className={styles.price}>{price}</span>
+                </div>
             </div>
-        </div>
+        </Context.Provider>
     )
 }
 
-export default Card
+
