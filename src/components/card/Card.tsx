@@ -24,6 +24,7 @@ export const Card = () => {
                     <span className={styles.price}>{price}</span>
                 </div>
             </div>
+            
         </Context.Provider>
     )
 }
