@@ -17,7 +17,6 @@ export const Card = () => {
     const Context = createContext(initialValue);
     let { titleText, name, price } = useContext(Context);
     
-
     return (
         <Context.Provider value={initialValue}>
             <div className={styles.wrapper}>
