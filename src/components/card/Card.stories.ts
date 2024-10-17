@@ -1,5 +1,5 @@
 import type { StoryObj } from "@storybook/react";
-import Card from "./Card";
+import { Card, initialValue } from "./Card";
 
 const meta = {
   title: "default/Card",
@@ -10,9 +10,5 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const DefaultCard: Story = {
-    args:{
-        title: 'string',
-        name: 'string',
-        price: 1
-    }
+  args: { initialValue },
 };

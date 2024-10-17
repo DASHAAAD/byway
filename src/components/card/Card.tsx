@@ -5,14 +5,18 @@ import card from '../../image/card.png'
 
 import styles from './card.module.css'
 
+
+export const initialValue = {
+    titleText: `Beginner’s Guide to Design`,
+    name: `By Ronald Richards`,
+    price: `$149.9`
+};
+
 export const Card = () => {
-    let initialValue = {
-        titleText: `Beginner’s Guide to Design`,
-        name: `By Ronald Richards`,
-        price: `$149.9`
-    };
+   
     const Context = createContext(initialValue);
     let { titleText, name, price } = useContext(Context);
+    
 
     return (
         <Context.Provider value={initialValue}>
@@ -24,7 +28,7 @@ export const Card = () => {
                     <span className={styles.price}>{price}</span>
                 </div>
             </div>
-            
+
         </Context.Provider>
     )
 }
