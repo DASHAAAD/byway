@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useAppSelector, useAppDispatch } from '../app/hooks';
 import { increment, decrement, reset } from './counterSlice';
 
 interface State {
@@ -10,11 +10,11 @@ const Counter = () => {
   const [state, setState] = useState<State>({ count: 0 });
   // setState({ count: state.count + 1 })}
 
-  const count = useSelector((state) => state.count);
-  const dispatch = useDispatch();
+  const count = useAppSelector((state) => state.counter.value);
+  const dispatch = useAppDispatch();
 
   return (
-    <div>
+    <div style={{backgroundColor: 'black'}}>
       <h1>Счётчик: {count}</h1>
       <button onClick={() => dispatch(increment())}>+</button>
       <button onClick={() => dispatch(decrement())}>-</button>
