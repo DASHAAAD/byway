@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const cardSlice = createSlice({
-    name: 'counter',
+    name: 'card',
     initialState: {
         titleText: `Beginner’s Guide to Design`,
         name: `By Ronald Richards`,

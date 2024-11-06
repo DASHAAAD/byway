@@ -4,22 +4,27 @@ import icon from '../../image/categoryIcon.png'
 
 import styles from './CategoryCard.module.css'
 
-export const cardItems: categoryProps = {
-  title: 'Ronald Richards',
-  text: 'UI/UX Designer'
-}
+import { useAppSelector} from '../../app/hooks';
 
-export type categoryProps = {
-  title: string,
-  text: string
-}
+// export const cardItems: categoryProps = {
+//   title: 'Ronald Richards',
+//   text: 'UI/UX Designer'
+// }
 
-const CategoryCard: FunctionComponent<categoryProps> = function () {
+// export type categoryProps = {
+//   title: string,
+//   text: string
+// }
+
+const CategoryCard: FunctionComponent = function () {
+
+  const count = useAppSelector((state) => state.CategoryCard);
+
   return (
     <div className={styles.wrapper}>
       <Image className={styles.img} src={icon} alt={''} />
-      <h2 className={styles.title}>{cardItems.title}</h2>
-      <p className={styles.text}>{cardItems.text}</p>
+      <h2 className={styles.title}>{count.title}</h2>
+      <p className={styles.text}>{count.text}</p>
     </div>
   )
 }
