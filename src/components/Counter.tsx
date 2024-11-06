@@ -7,8 +7,6 @@ interface State {
 }
 
 const Counter = () => {
-  const [state, setState] = useState<State>({ count: 0 });
-  // setState({ count: state.count + 1 })}
 
   const count = useAppSelector((state) => state.counter.value);
   const dispatch = useAppDispatch();
