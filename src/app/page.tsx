@@ -2,21 +2,25 @@
 
 import '../tokens/style/colors.css'
 
+import { Error } from '@/components/error/Error';
+import HomePage from '@/page/home/Home';
 
-import { Provider } from 'react-redux';
-import {store} from '../app/store'
-import CategoryCard from '@/components/categoryCard/CategoryCard';
+import {
+  BrowserRouter,
+  Route,
+  Routes,
+} from "react-router-dom";
 
-
-
-export * from "@mui/material";
 
 export default function Home() {
   return (
-    <Provider store={store}>
-      <main className="bg-slate-500 flex flex-col h-screen justify-between">
-       <CategoryCard />
-      </main>
-    </Provider>
+    <BrowserRouter>
+      <Routes>
+
+        <Route path="*" element={<Error />} />
+        <Route path="/" element={<HomePage />} />
+
+      </Routes>
+    </BrowserRouter>
   );
 }

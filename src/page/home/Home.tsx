@@ -11,17 +11,19 @@ import man from '../../image/man.png'
 import manTwo from '../../image/man2.png'
 
 import { AstrologyCards } from '@/components/astrologyCards/AstrologyCards'
-import Card from '@/components/card/Card'
+
 import CategoryCard from '@/components/categoryCard/CategoryCard'
 
 import { Title } from '@/components/Title/Title'
 import ButtonBlack from '@/components/ButtonBlack/ButtonBlack'
 import { LayoutFlex } from '@/LayoutComponents/LayoutFlex/LayoutFlex'
 import LayoutColumn from '@/LayoutComponents/LayoutColumn/LayoutColumn'
+import { Link, NavLink } from 'react-router-dom'
 
 
 const HomePage: FunctionComponent = (props) => {
     return (
+
         <div className={styles.wrapper}>
 
             <Header key={null} type={undefined} props={undefined} />
@@ -96,7 +98,7 @@ const HomePage: FunctionComponent = (props) => {
                         </div>
                     </section>
 
-                    <section className={styles.section}>
+                    {/* <section className={styles.section}>
                         <Title text='Top Courses' />
                         <div className={styles.List}>
                             <LayoutColumn>
@@ -115,9 +117,9 @@ const HomePage: FunctionComponent = (props) => {
                                 <Card title='title' name='name' price={0} />
                             </LayoutColumn>
                         </div>
-                    </section>
+                    </section> */}
 
-                    <section className={styles.section}>
+                    {/* <section className={styles.section}>
                         <Title text='Top Courses' />
                         <div className={styles.List}>
                             <LayoutColumn>
@@ -146,7 +148,7 @@ const HomePage: FunctionComponent = (props) => {
                                 </div>
                             </LayoutColumn>
                         </div>
-                    </section>
+                    </section> */}
 
                     <section>
                         <LayoutFlex className={styles.List}
@@ -181,8 +183,6 @@ const HomePage: FunctionComponent = (props) => {
 
             <Footer />
         </div>
-
-
     )
 }
 
