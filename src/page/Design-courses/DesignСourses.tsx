@@ -8,8 +8,7 @@ import Rating from '@mui/material/Rating';
 import Stack from '@mui/material/Stack';
 const DesignСourses: FunctionComponent = () => {
     return (
-        <div className={styles.wrapper}>
-            <Header />
+   
             <div className={styles.container}>
                 <Title text='Design courses       ' />
                 <div className={styles.buttons}>
@@ -25,8 +24,6 @@ const DesignСourses: FunctionComponent = () => {
                 </aside>
 
             </div>
-            <Footer />
-        </div>
     )
 }
 

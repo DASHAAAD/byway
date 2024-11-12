@@ -47,10 +47,12 @@ const Form: FunctionComponent = () => {
   return (
     <>
 
-        <div className={styles.container}>
-          <div className={styles.wrapper}>
+      <div className={styles.container}>
+        <div className={styles.wrapper}>
+          <Link to='/DesignСourses'>
             <Title text='Log in to your account' />
-            {/* <form className={styles.form}
+          </Link>
+          {/* <form className={styles.form}
               id="firebaseui-auth-container"
               onSubmit={onSubmit}
               action="">
@@ -61,11 +63,11 @@ const Form: FunctionComponent = () => {
                 onChange={(e) => setPassword(e.currentTarget.value)} value={password} placeholder='password' />
               <ButtonBlack style={width} text='Sign in' />
             </form> */}
-          </div>
-          <Image src={girl} alt={''} />
         </div>
-        <Footer />
-      
+        <Image src={girl} alt={''} />
+      </div>
+      <Footer />
+
     </>
   )
 }
