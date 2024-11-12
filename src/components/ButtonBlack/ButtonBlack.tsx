@@ -8,6 +8,7 @@ interface ButtonBlackProps {
     label?: string;
     onClick?: () => void;
     backgroundColor?: string;
+    className: string
 
 }
 

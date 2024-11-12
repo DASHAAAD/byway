@@ -1,17 +1,26 @@
 .button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 8px 24px;
-    gap: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px;
+  gap: 8px;
 
-    width: 314px;
-    height: 48px;
+  width: 314px;
+  height: 48px;
 
-    background: var(--text--color--dark);
+  background: var(--text--color--dark);
+}
+
+.buttonTwo {
+  padding: 8px 24px;
+  gap: 8px;
+
+  width: 620px;
+  height: 48px;
+  border-radius: 24px;
 }
 
 .button::after {
-    content: ">";
+  content: ">";
 }

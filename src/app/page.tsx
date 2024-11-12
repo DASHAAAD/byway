@@ -3,9 +3,9 @@
 import '../tokens/style/colors.css'
 
 import { Error } from '@/components/error/Error';
-import Form from '@/page/auth-loginForm/Form';
+
 import DesignСourses from '@/page/Design-courses/DesignСourses';
-import HomePage from '@/page/home/Home';
+import { LoginForm } from '@/page/loginForm/LoginForm';
 import Footer from '@/sections/Footer/Footer';
 import Header from '@/sections/Header/Header';
 
@@ -24,7 +24,7 @@ export default function Home() {
         <Routes>
 
           <Route path="*" element={<Error />} />
-          <Route path="/" element={<Form />} />
+          <Route path="/" element={<LoginForm/>} />
           <Route path="/DesignСourses" element={<DesignСourses/>} />
 
         </Routes>
