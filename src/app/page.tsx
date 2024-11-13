@@ -1,5 +1,6 @@
 "use client"
 
+import { CardUser } from '@/components/cards/CardUser/CardUser';
 import '../tokens/style/colors.css'
 
 import { Error } from '@/components/error/Error';
@@ -19,7 +20,7 @@ import {
 export default function Home() {
   return (
     <>
-      <Header key={null} type={undefined} props={undefined} />
+      {/* <Header key={null} type={undefined} props={undefined} />
       <BrowserRouter>
         <Routes>
 
@@ -29,7 +30,9 @@ export default function Home() {
 
         </Routes>
       </BrowserRouter>
-      <Footer />
+      <CardUser >
+      <Footer /> */}
+      <CardUser/>
     </>
   );
 }
