@@ -2,8 +2,11 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { FC, ReactNode } from 'react'
 
+import style from '../CardUser/CardUser.module.css'
+
 import man from '../../../image/categoryIcon.png'
 import Image from 'next/image'
+import { LayoutFlex } from '@/LayoutComponents/LayoutFlex/LayoutFlex'
 
 
 export const ArrayUserProps = [
@@ -13,7 +16,6 @@ export const ArrayUserProps = [
         text: 'UI/UX Designer',
         imgUrl: man,
         alt: 'описание',
-        src: man
     },
 
     {
@@ -63,15 +65,13 @@ interface Type extends TypeProps, TypeImgs {
 export const CardUser: FC<Type> = ({
 }) => {
     return (
-        <div>
+        <div className={style.wrapper}>
             {ArrayUserProps.map(Item => {
                 return (
-                    <div key={Item.id}>
-                        <Image src={Item.imgUrl} alt={Item.alt} />
-                        <div>
-                            <h2>{Item.nameUser}</h2>
-                            <p>{Item.text}</p>
-                        </div>
+                    <div className={style.container} key={Item.id}>
+                        <Image className={style.img} src={Item.imgUrl} alt={Item.alt} />
+                        <h2 className={style.title}>{Item.nameUser}</h2>
+                        <p className={style.text}>{Item.text}</p>
                     </div>
                 )
             })}
