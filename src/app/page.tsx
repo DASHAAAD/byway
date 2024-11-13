@@ -3,7 +3,7 @@
 import { CardUser } from '@/components/cards/CardUser/CardUser';
 import '../tokens/style/colors.css'
 
-import { Error } from '@/components/error/Error';
+
 
 import DesignСourses from '@/page/Design-courses/DesignСourses';
 import { LoginForm } from '@/page/loginForm/LoginForm';
@@ -20,8 +20,8 @@ import {
 export default function Home() {
   return (
     <>
-      {/* <Header key={null} type={undefined} props={undefined} />
-      <BrowserRouter>
+      <Header key={null} type={undefined} props={undefined} />
+      {/*   <BrowserRouter>
         <Routes>
 
           <Route path="*" element={<Error />} />
@@ -30,9 +30,10 @@ export default function Home() {
 
         </Routes>
       </BrowserRouter>
-      <CardUser >
-      <Footer /> */}
-      <CardUser/>
+      <CardUser > */}
+      <LoginForm />
+      <Footer />
+
     </>
   );
 }
