@@ -52,8 +52,8 @@ export const ProductCard: FC<Type> = () => {
         <div className={style.wrapper}>
             {ArrayProductCard.map(item => {
                 return (
-                    <div key={item.id}>
-                        <Image src={item.imgUrl} alt={''} />
+                    <div className={style.item} key={item.id}>
+                        <Image className={style.img} src={item.imgUrl} alt={''} />
                         <div className={style.info}>
                             <h4 className={style.title}>{item.title}</h4>
                             <p className={style.text}>{item.text}</p>

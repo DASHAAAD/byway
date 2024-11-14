@@ -6,6 +6,7 @@ import React, { FC } from 'react'
 
 import { ArrayProductCard } from '../../components/cards/ProductCard/ProductCard'
 import { CoursesList } from '@/components/coursesList/coursesList'
+import styles from './Courses.module.css';
 
 ArrayProductCard.splice(3)
 
@@ -18,17 +19,32 @@ console.log(ArrayProductCard)
 
 export const Courses: FC = () => {
     return (
-        <div>
-            <CoursesList />
-            {ArrayProductCard.map(i => {
-                return (
-                    <ProductCard />
-                )
-            })}
-            <Title text='Popular Mentors' />
-            <CardUser />
-            <Title text='Popular Courses' />
-            <ProductCard />
+        <div className={styles.container}>
+
+            <section className={styles.section}>
+                <Title text='All courses' />
+                <div className={styles.wrapper}>
+                    <CoursesList />
+                    <div>
+                        {ArrayProductCard.map(i => {
+                            return (
+                                <ProductCard />
+                            )
+                        })}
+                    </div>
+                </div>
+            </section>
+
+            <section className={styles.section}>
+                <Title text='Popular Mentors' />
+                <CardUser />
+            </section>
+
+            <section className={styles.section}>
+                <Title text='Popular Courses' />
+                <ProductCard />
+            </section>
+
         </div>
     )
 }
