@@ -6,8 +6,6 @@ import style from '../CardUser/CardUser.module.css'
 
 import man from '../../../image/categoryIcon.png'
 import Image from 'next/image'
-import { LayoutFlex } from '@/LayoutComponents/LayoutFlex/LayoutFlex'
-
 
 export const ArrayUserProps = [
     {
@@ -43,7 +41,7 @@ export const ArrayUserProps = [
     }
 ]
 
-interface TypeProps {
+export interface TypeProps {
     id?: string
     nameUser?: string
     text?: string

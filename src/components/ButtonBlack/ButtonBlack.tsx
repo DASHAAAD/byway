@@ -1,14 +1,15 @@
-import React, { FunctionComponent } from 'react'
-import { ReactNode, CSSProperties } from 'react';
+import React from 'react'
 
+import style from './ButtonBlack.module.css'
 
 interface ButtonBlackProps {
     text?: string
     style?: React.CSSProperties
-    label?: string;
-    onClick?: () => void;
-    backgroundColor?: string;
-    className: string
+    label?: string
+    onClick?: () => void
+    backgroundColor?: string
+    className?: string
+    width?: string
 
 }
 
@@ -18,6 +19,7 @@ export const ButtonBlack = ({
 }: ButtonBlackProps) => {
     return (
         <button 
+        className={style.button}
         {...props}
         >{props.text}</button>
     )

@@ -15,6 +15,7 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
+import { Courses } from '@/page/courses/Courses';
 
 
 export default function Home() {
@@ -31,7 +32,7 @@ export default function Home() {
         </Routes>
       </BrowserRouter>
       <CardUser > */}
-      <LoginForm />
+      <Courses />
       <Footer />
 
     </>
