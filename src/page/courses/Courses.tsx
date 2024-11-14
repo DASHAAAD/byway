@@ -9,7 +9,7 @@ export const Courses: FC = () => {
             <Title text='All courses' />
             <Title text='Popular Mentors' />
             <CardUser />
-            <Title text={''} />
+            <Title text='Popular Courses' />
             <ProductCard />
         </div>
     )

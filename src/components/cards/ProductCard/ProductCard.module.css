@@ -1,7 +1,13 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
 .info {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
+  width: 289px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
 }
 
 .title {

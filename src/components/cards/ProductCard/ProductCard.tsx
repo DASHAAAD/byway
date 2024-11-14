@@ -49,7 +49,7 @@ interface Type extends TypeProps, TypeImgs, PropsText {
 
 export const ProductCard: FC<Type> = () => {
     return (
-        <div>
+        <div className={style.wrapper}>
             {ArrayProductCard.map(item => {
                 return (
                     <div key={item.id}>
