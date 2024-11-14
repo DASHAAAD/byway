@@ -32,7 +32,7 @@ export default function Home() {
         </Routes>
       </BrowserRouter>
       <CardUser > */}
-      <Courses />
+     <LoginForm />
       <Footer />
 
     </>
