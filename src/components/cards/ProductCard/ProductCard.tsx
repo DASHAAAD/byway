@@ -6,7 +6,7 @@ import style from './ProductCard.module.css'
 import Image from 'next/image'
 import img from '../../../image/card.png'
 
-const ArrayProductCard = [
+export const ArrayProductCard = [
     {
         id: 'one',
         title: 'Beginner’s Guide to Design',
