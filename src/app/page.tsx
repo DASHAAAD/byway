@@ -15,8 +15,10 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
-import { Courses } from '@/page/courses/Courses';
 
+import { createRandomUser } from '@/page/playground';
+
+console.log(createRandomUser)
 
 export default function Home() {
   return (
@@ -32,7 +34,6 @@ export default function Home() {
         </Routes>
       </BrowserRouter>
       <CardUser > */}
-     <LoginForm />
       <Footer />
 
     </>
