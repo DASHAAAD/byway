@@ -78,3 +78,5 @@ export const CardUser: FC<Type> = ({
         </div>
     )
 }
+export type { TypeProps }
+
