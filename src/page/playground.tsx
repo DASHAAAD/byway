@@ -17,7 +17,7 @@ export const createRandomUser = () => {
 
 
 const user = createRandomUser();
-console.log(user)
+// console.log(user)
 
 const randomName = faker.person.fullName(); // Rowan Nikolaus
 const randomEmail = faker.internet.email(); // Kassandra.Haley@erich.biz

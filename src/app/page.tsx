@@ -34,6 +34,7 @@ export default function Home() {
         </Routes>
       </BrowserRouter>
       <CardUser > */}
+      <CardUser />
       <Footer />
 
     </>
