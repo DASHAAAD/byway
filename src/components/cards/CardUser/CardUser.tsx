@@ -7,6 +7,8 @@ import style from '../CardUser/CardUser.module.css'
 import man from '../../../image/categoryIcon.png'
 import Image from 'next/image'
 
+import { TypeProps } from './CardUserSlice'
+
 export const ArrayUserProps = [
     {
         id: 'one',
@@ -41,13 +43,13 @@ export const ArrayUserProps = [
     }
 ]
 
-export interface TypeProps {
-    id?: string
-    nameUser?: string
-    text?: string
-    map?: ReactNode;
-    image?: HTMLImageElement
-}
+// export interface TypeProps {
+//     id?: string
+//     nameUser?: string
+//     text?: string
+//     map?: ReactNode;
+//     image?: HTMLImageElement
+// }
 
 export interface TypeImgs {
     imgUrl?: string
