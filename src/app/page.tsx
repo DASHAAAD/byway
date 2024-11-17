@@ -17,6 +17,7 @@ import {
 } from "react-router-dom";
 
 import { createRandomUser } from '@/page/playground';
+import { FlyOut } from "../../src/components/NavigationMenu/NavWrapper";
 
 console.log(createRandomUser)
 
@@ -34,7 +35,10 @@ export default function Home() {
         </Routes>
       </BrowserRouter>
       <CardUser > */}
-      <CardUser />
+      <FlyOut>
+      <FlyOut.Toggle />
+    </FlyOut>
+      {/* <CardUser /> */}
       <Footer />
 
     </>
