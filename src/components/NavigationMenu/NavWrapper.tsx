@@ -1,16 +1,16 @@
-import React, { createContext, useContext } from "react";
+import React, { createContext, FC, useContext } from "react";
 
 // обёрка всего меню 
 
 interface TypeWrapper {
-    value: boolean
-    setValue: (value: string) => void
-    children?: React.ReactNode
+    value?: boolean
+    setValue?: (value: boolean) => boolean | void
+    children?: React.ReactNode,
 }
 
-const NawContect = createContext<TypeWrapper>({
+const NawContect = createContext<TypeWrapper> ({
     value: false,
-    setValue: () => { }
+    setValue: () => {}
 })
 
 const NavWrapper = ({
@@ -30,13 +30,47 @@ const NavWrapper = ({
 const Nav = () => {
     const { value, setValue } = useContext(NawContect)
     return (
-        <div onClick={() => setValue(value)}></div>
+        <>
+            <button
+                onClick={() => setValue(!value)}
+            >
+               
+            </button>
+        </>
+    )
+}
+
+// списки и сами элементы li 
+
+const NavList = [
+    {
+        id: 'one',
+        text: 'Another link'
+    },
+    {
+        id: 'two',
+        text: 'Navigation menu item'
+    }
+]
+
+const NavListRender = () => {
+    return (
+        <ul>
+            {NavList.map(item => {
+                return (
+                    <li style={{color: 'red', fontSize: '100px'}} key={item.id}>
+                        {item.text}
+                    </li>
+                )
+            })}
+        </ul>
     )
 }
 
 
 
-
+NavWrapper.Nav = Nav
+NavWrapper.NavListRender = NavListRender
 export default NavWrapper
 
 
