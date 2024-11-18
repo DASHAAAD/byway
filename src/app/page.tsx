@@ -17,7 +17,8 @@ import {
 } from "react-router-dom";
 
 import { createRandomUser } from '@/page/playground';
-import NavWrapper from '@/components/NavigationMenu/NavWrapper';
+import { Nav } from '@/components/NavigationMenu/Nav';
+import { NavWrapper } from '@/components/NavigationMenu/NavWrapper';
 
 
 console.log(createRandomUser)
@@ -36,7 +37,14 @@ export default function Home() {
         </Routes>
       </BrowserRouter>
       <CardUser > */}
-      <NavWrapper.NavListRender />
+      <NavWrapper>
+        <NavWrapper.Nav />
+        <NavWrapper.List>
+          ssssss
+          <NavWrapper.Item>Edit</NavWrapper.Item>
+          <NavWrapper.Item>Delete</NavWrapper.Item>
+        </NavWrapper.List>
+      </NavWrapper>
       <Footer />
 
     </>
