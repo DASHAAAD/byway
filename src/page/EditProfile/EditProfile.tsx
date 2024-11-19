@@ -5,6 +5,7 @@ import { Nav } from '@/components/NavigationMenu/Nav';
 import { Title } from '@/components/Title/Title';
 import React, { FC } from 'react'
 
+
 interface Type {
 
 }
@@ -45,7 +46,7 @@ const EditProfile: FC<Type> = () => {
                         <li>Wireframing and Prototyping </li>
                         <li>Design Thinking</li>
                     </ul>
-                    <p>Professional Experience Ronald Richard has an extensive professional background in UX/UI design, having worked with renowned companies such as [Company Name] and [Company Name]. His portfolio includes a diverse range of projects spanning web applications, mobile apps, and e-commerce platforms.</p>
+                    <p>Professional Experience Ronald Richard has an extensive professional background in UX/UI design, having worked with renowned companies such asHis portfolio includes a diverse range of projects spanning web applications, mobile apps, and e-commerce platforms.</p>
                     <div>
                             <h3>Language</h3>
                             <Input />
