@@ -37,14 +37,7 @@ export default function Home() {
         </Routes>
       </BrowserRouter>
       <CardUser > */}
-      <NavWrapper>
-        <NavWrapper.Nav />
-        <NavWrapper.List>
-          ssssss
-          <NavWrapper.Item>Edit</NavWrapper.Item>
-          <NavWrapper.Item>Delete</NavWrapper.Item>
-        </NavWrapper.List>
-      </NavWrapper>
+      <Nav />
       <Footer />
 
     </>

@@ -5,7 +5,7 @@ import React, { createContext, FC, useContext, useState } from "react";
 interface TypeWrapper {
     value?: boolean
     setValue?: (value: boolean) => boolean | void
-    toggleMenu?:(value: boolean) => boolean | void
+    toggleMenu?: (value: boolean) => boolean | void
     menuOpen?: boolean
     children?: React.ReactNode,
 }
@@ -37,35 +37,55 @@ export const NavWrapper = ({
 
 const Nav: FC<TypeWrapper> = (props) => {
     const { value, setValue, menuOpen, toggleMenu } = useContext(NawContect)
-    
+
     console.log(value)
     return (
         <>
             <button
                 style={{
-                    color: 'red',
-                    fontSize: '40px',
-                    backgroundColor: 'black',
-                    width: '500px',
-                    height: '500px'
+                    marginBottom: '20px',
+                    width: '360px',
+                    height: '53px',
+                    fontWeight: '400',
+                    fontSize: '20px',
+                    lineHeight: '24px',
+                    color: 'rgba(237, 238, 240, 0.96)',
+                    borderRadius: '24px',
+                    backgroundColor: 'black'
                 }}
                 onClick={toggleMenu}
             >
-               {props.children}
-               fffff
-            </button>
-            {menuOpen && props.children}
+                {props.children}
+            </button >
+            {menuOpen && props.children
+            }
         </>
     )
 }
 
-const List = ({children}:TypeWrapper) => {
+
+const List = ({ children }: TypeWrapper) => {
     const { value, menuOpen } = useContext(NawContect);
-    return menuOpen && <ul style={{color: 'red', fontSize:'30px'}} >{children}</ul>;
+    return menuOpen && <ul
+    >{children}</ul>;
 }
 
-const Item = ({children}: TypeWrapper) => {
-    return <li style={{color: 'red', fontSize: '40px'}}>{children}</li>;
+const Item = ({ children }: TypeWrapper) => {
+    return <li
+        style={{
+            width: '360px',
+            height: '53px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            fontWeight: '400',
+            fontSize: '20px',
+            lineHeight: '24px',
+            color: '#1C2024',
+            borderRadius: '24px',
+            border: '1px solid #1C2024'
+        }}
+    >{children}</li>;
 }
 
 // списки и сами элементы li 

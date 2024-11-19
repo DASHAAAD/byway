@@ -5,11 +5,11 @@ import { NavWrapper } from './NavWrapper'
 export const Nav: FC = () => {
     return (
         <NavWrapper>
-            <NavWrapper.Nav />
+            <NavWrapper.Nav>
+                Navigation menu item
+            </NavWrapper.Nav >
             <NavWrapper.List>
-                ssssss
-                <NavWrapper.Item>Edit</NavWrapper.Item>
-                <NavWrapper.Item>Delete</NavWrapper.Item>
+                <NavWrapper.Item>Navigation menu item</NavWrapper.Item>
             </NavWrapper.List>
         </NavWrapper>
     )
