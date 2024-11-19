@@ -7,7 +7,7 @@ import style from '../CardUser/CardUser.module.css'
 import man from '../../../image/categoryIcon.png'
 import Image from 'next/image'
 
-import { TypeProps } from './CardUserSlice'
+import { Type } from '@/components/coursesList/coursesListSlice'
 
 export const ArrayUserProps = [
     {
@@ -43,25 +43,6 @@ export const ArrayUserProps = [
     }
 ]
 
-// export interface TypeProps {
-//     id?: string
-//     nameUser?: string
-//     text?: string
-//     map?: ReactNode;
-//     image?: HTMLImageElement
-// }
-
-export interface TypeImgs {
-    imgUrl?: string
-    src?: string
-}
-
-interface Type extends TypeProps, TypeImgs {
-    map?: ReactNode;
-    image?: HTMLImageElement
-
-}
-
 export const CardUser: FC<Type> = ({
 }) => {
     return (
@@ -78,5 +59,4 @@ export const CardUser: FC<Type> = ({
         </div>
     )
 }
-export type { TypeProps }
 

@@ -9,9 +9,10 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const DefaultProductCard:Story = {
+export const DefaultProductCard: Story = {
     args: {
-        
+        id: 'string',
+        placeholder: 'string'
     }
 }
 

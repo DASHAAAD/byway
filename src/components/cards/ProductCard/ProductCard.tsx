@@ -1,10 +1,10 @@
 import React, { FC, ReactNode } from 'react'
-import { TypeProps, TypeImgs } from '../CardUser/CardUser'
 
 import style from './ProductCard.module.css'
 
 import Image from 'next/image'
 import img from '../../../image/card.png'
+import { Type } from '@/components/coursesList/coursesListSlice'
 
 export const ArrayProductCard = [
     {
@@ -36,16 +36,6 @@ export const ArrayProductCard = [
         imgUrl: img
     }
 ]
-
-interface PropsText {
-    title?: string,
-    price?: string
-}
-
-interface Type extends TypeProps, TypeImgs, PropsText {
-    map?: ReactNode;
-    image?: HTMLImageElement
-}
 
 export const ProductCard: FC<Type> = () => {
     return (
