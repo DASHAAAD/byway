@@ -9,7 +9,7 @@ import girl from '../../image/girl2.png'
 import styles from '../../page/auth-register/Register.module.css'
 
 import { useState } from "react";
-import { Input } from '@/components/formItem/FormItem'
+import  Input  from '@/components/formItem/FormItem'
 import ButtonBlack from '@/components/ButtonBlack/ButtonBlack'
 
 
@@ -43,7 +43,6 @@ const Register: FunctionComponent = () => {
 
     return (
         <section>
-            <Header key={null} type={undefined} props={undefined} />
             <div className={styles.container}>
                 <Image src={girl} alt={''} />
                 <div className={styles.wrapper}>
@@ -77,7 +76,6 @@ const Register: FunctionComponent = () => {
                     </form>
                 </div>
             </div>
-            <Footer />
         </section>
     )
 }

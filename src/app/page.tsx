@@ -23,18 +23,19 @@ import { EditProfile } from '@/page/EditProfile/EditProfile';
 import { Courses } from '@/page/courses/Courses';
 import Register from '@/page/auth-register/Register';
 import { RoutesUi } from '@/RoutesUi/RoutesUi';
-
-
-
-console.log(createRandomUser)
+import React from 'react';
 
 export default function Home() {
   return (
     <>
-      <Header key={null} type={undefined} props={undefined} />
-      
-      <RoutesUi />
-      <Footer />
+     
+        <BrowserRouter>
+        <Header key={null} type={undefined} props={undefined} />
+          <RoutesUi />
+         
+          <Footer />
+        </BrowserRouter>
+     
     </>
   )
 }

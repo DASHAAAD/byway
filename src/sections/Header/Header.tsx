@@ -6,6 +6,7 @@ import basket from '../../image/basket.png'
 import search from '../../image/search.png'
 
 import styles from '../Header/header.module.css'
+import { Link } from 'react-router-dom'
 
 const Header = ({...props}:React.JSX.Element) => {
     return (
@@ -25,8 +26,9 @@ const Header = ({...props}:React.JSX.Element) => {
                     <a className={styles.link} href="#">
                         <Image src={basket} alt={''} />
                     </a>
-                    <button className={styles.buttonOne}>Log in</button>
-                    <button className={styles.buttonTwo}>Sign up</button>
+                    <Link className={styles.buttonOne} to='/LoginForm'>Log in</Link>
+                    {/* <button className={styles.buttonOne}>Log in</button> */}
+                    <Link className={styles.buttonTwo} to='/Register'>Sign up</Link>
                 </div>
             </div>
         </header>

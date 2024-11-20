@@ -6,10 +6,8 @@ import { LoginForm } from '@/page/loginForm/LoginForm'
 import React, { FC } from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-export const RoutesUi: FC = () => {
+export const RoutesUi = () => {
     return (
-        <React.StrictMode>
-            <BrowserRouter>
                 <Routes>
 
                     <Route path="/" element={<HomePage />} />
@@ -17,7 +15,5 @@ export const RoutesUi: FC = () => {
                     <Route path="/DesignСourses" element={<DesignСourses />} />
                     <Route path='/Register' element={<Register />} />
                 </Routes>
-            </BrowserRouter>
-        </React.StrictMode>
     )
 }
