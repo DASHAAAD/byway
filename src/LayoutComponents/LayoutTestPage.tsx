@@ -2,7 +2,6 @@ import Header from '@/sections/Header/Header'
 import React, { FunctionComponent } from 'react'
 import LayoutColumn from './LayoutColumn/LayoutColumn'
 import TwoColumn from './TwoColumn/TwoColumn'
-import { LayoutFlex } from './LayoutFlex/LayoutFlex'
 import { LayoutColumnAndFoto } from './LayoutColumnAndFoto/LayoutColumnAndFoto'
 
 import man from '../../src/image/man.png'

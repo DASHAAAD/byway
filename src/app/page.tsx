@@ -20,6 +20,9 @@ import { createRandomUser } from '@/page/playground';
 import { Nav } from '@/components/NavigationMenu/Nav';
 import { NavWrapper } from '@/components/NavigationMenu/NavWrapper';
 import { EditProfile } from '@/page/EditProfile/EditProfile';
+import { Courses } from '@/page/courses/Courses';
+import Register from '@/page/auth-register/Register';
+import { RoutesUi } from '@/RoutesUi/RoutesUi';
 
 
 
@@ -29,19 +32,9 @@ export default function Home() {
   return (
     <>
       <Header key={null} type={undefined} props={undefined} />
-      <EditProfile />
-      {/*   <BrowserRouter>
-        <Routes>
-
-          <Route path="*" element={<Error />} />
-          <Route path="/" element={<LoginForm/>} />
-          <Route path="/DesignСourses" element={<DesignСourses/>} />
-
-        </Routes>
-      </BrowserRouter>
-      <CardUser > */}
+      
+      <RoutesUi />
       <Footer />
-
     </>
-  );
+  )
 }

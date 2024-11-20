@@ -1,19 +1,20 @@
 import type { StoryObj } from "@storybook/react";
-import { CardUser } from "./CardUser";
+
 import style from './CardUser.module.css'
 import man from '../../../image/categoryIcon.png'
 import Image from "next/image";
+import { userSlice } from "./CardUserSlice";
 
 const meta = {
     title: 'default/CardUser',
-    component: CardUser,
+    component: userSlice,
 }
 
 export default meta
 type Story = StoryObj<typeof meta>
 
 
-const ArrayUserProps = [
+export const ArrayUserProps = [
     {
         id: 'one',
         nameUser: 'Ronald Richards',
@@ -96,4 +97,6 @@ export const OneUser: Story = {
         )
     }
 }
+
+
 
