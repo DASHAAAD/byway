@@ -19,7 +19,8 @@ import {
 import { createRandomUser } from '@/page/playground';
 import { Nav } from '@/components/NavigationMenu/Nav';
 import { NavWrapper } from '@/components/NavigationMenu/NavWrapper';
-import EditProfile from '@/page/EditProfile/EditProfile';
+import { EditProfile } from '@/page/EditProfile/EditProfile';
+
 
 
 console.log(createRandomUser)
@@ -39,7 +40,6 @@ export default function Home() {
         </Routes>
       </BrowserRouter>
       <CardUser > */}
-      <Nav />
       <Footer />
 
     </>

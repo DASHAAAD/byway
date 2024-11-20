@@ -2,33 +2,33 @@ import React from 'react';
 
 import { NavWrapper, TypeWrapper } from './NavWrapper';
 import { NavList } from './NavWrapper';
-import { Meta } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react';
 
-export default {
-  title: 'NavWrapper',
-  component: NavWrapper,
-} as Meta;
+const meta = {
+    title: 'NavWrapper',
+    component: NavWrapper,
+}
 
-
-const Template: Story<TypeWrapper> = (args) => <NavWrapper {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {
-  children: (
-    <>
-      <NavWrapper.Nav>Toggle Menu</NavWrapper.Nav>
-      <NavWrapper.List>
-        {NavList.map(item => (
-          <NavWrapper.Item key={item.id}>{item.text}</NavWrapper.Item>
-        ))}
-      </NavWrapper.List>
-    </>
-  ),
-};
+export default meta
+type Story = StoryObj<typeof meta>
 
 
+export const Default: Story = {
+    args: {
+        children: (
+            <>
+                <NavWrapper.Nav>Toggle Menu</NavWrapper.Nav>
+                <NavWrapper.List>
+                    {NavList.map(item => (
+                        <NavWrapper.Item key={item.id}>{item.text}</NavWrapper.Item>
+                    ))}
+                </NavWrapper.List>
+            </>
+        ),
+    }
+}
 
-export const NavListTwo = [
+export const ListEditProfile = [
     {
         id: 'one',
         text: 'Courses'
@@ -51,18 +51,17 @@ export const NavListTwo = [
     }
 ]
 
-export const MenuOpen = Template.bind({});
-MenuOpen.args = {
-  children: (
-    <>
-      <NavWrapper.Nav>Profile</NavWrapper.Nav>
-      <NavWrapper.List>
-        {NavListTwo.map(item => (
-          <NavWrapper.Item key={item.id}>{item.text}</NavWrapper.Item>
-        ))}
-      </NavWrapper.List>
-    </>
-  ),
-  value: true,
-};
-
+export const MenuEditProfile:Story = {
+    args: {
+        children: (
+            <>
+                <NavWrapper.Nav>Profile</NavWrapper.Nav>
+                <NavWrapper.List>
+                    {ListEditProfile.map(item => (
+                        <NavWrapper.Item key={item.id}>{item.text}</NavWrapper.Item>
+                    ))}
+                </NavWrapper.List>
+            </>
+        ),
+    }
+}

@@ -1,18 +1,17 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { StoryObj } from "@storybook/react";
 import { CardUser } from "./CardUser";
-
 import style from './CardUser.module.css'
 import man from '../../../image/categoryIcon.png'
-import { Type } from "@/components/coursesList/coursesListSlice";
 import Image from "next/image";
 
-export default {
+const meta = {
     title: 'default/CardUser',
     component: CardUser,
-} as Meta;
+}
 
+export default meta
+type Story = StoryObj<typeof meta>
 
-const Template: Story<Type> = (args) => <CardUser {...args} />
 
 const ArrayUserProps = [
     {
@@ -48,23 +47,24 @@ const ArrayUserProps = [
     }
 ]
 
-export const Default = Template.bind({});
-Default.args = {
-    children: (
-        <>
-            <div className={style.wrapper}>
-                {ArrayUserProps.map(Item => {
-                    return (
-                        <div className={style.container} key={Item.id}>
-                            <img className={style.img} src={Item.imgUrl} alt={Item.alt} />
-                            <h2 className={style.title}>{Item.nameUser}</h2>
-                            <p className={style.text}>{Item.text}</p>
-                        </div>
-                    )
-                })}
-            </div>
-        </>
-    )
+export const Default: Story = {
+    args: {
+        children: (
+            <>
+                <div className={style.wrapper}>
+                    {ArrayUserProps.map(Item => {
+                        return (
+                            <div className={style.container} key={Item.id}>
+                                <Image src={man} alt={""} />
+                                <h2 className={style.title}>{Item.nameUser}</h2>
+                                <p className={style.text}>{Item.text}</p>
+                            </div>
+                        )
+                    })}
+                </div>
+            </>
+        )
+    }
 }
 
 const oneUser = [
@@ -77,22 +77,23 @@ const oneUser = [
     },
 ]
 
-
-export const OneUser = Template.bind({});
-OneUser.args = {
-    children: (
-        <>
-            <div className={style.wrapper}>
-                {oneUser.map(Item => {
-                    return (
-                        <div className={style.container} key={Item.id}>
-                           <Image src={man} alt={""} />
-                            <h2 className={style.title}>{Item.nameUser}</h2>
-                            <p className={style.text}>{Item.text}</p>
-                        </div>
-                    )
-                })}
-            </div>
-        </>
-    )
+export const OneUser: Story = {
+    args: {
+        children: (
+            <>
+                <div className={style.wrapper}>
+                    {oneUser.map(Item => {
+                        return (
+                            <div className={style.container} key={Item.id}>
+                                <Image src={man} alt={""} />
+                                <h2 className={style.title}>{Item.nameUser}</h2>
+                                <p className={style.text}>{Item.text}</p>
+                            </div>
+                        )
+                    })}
+                </div>
+            </>
+        )
+    }
 }
+
