@@ -1,16 +1,68 @@
-import { Nav } from "./Nav";
-import { StoryObj } from "@storybook/react";
+import React from 'react';
 
-const meta = {
-    title: 'default/Nav',
-    component: Nav
-}
+import { NavWrapper, TypeWrapper } from './NavWrapper';
+import { NavList } from './NavWrapper';
+import { Meta } from '@storybook/react';
 
-export default meta 
-type Story = StoryObj<typeof meta>
+export default {
+  title: 'NavWrapper',
+  component: NavWrapper,
+} as Meta;
 
-export const DefaultNav: Story = {
-    args: {
 
+const Template: Story<TypeWrapper> = (args) => <NavWrapper {...args} />;
+
+export const Default = Template.bind({});
+Default.args = {
+  children: (
+    <>
+      <NavWrapper.Nav>Toggle Menu</NavWrapper.Nav>
+      <NavWrapper.List>
+        {NavList.map(item => (
+          <NavWrapper.Item key={item.id}>{item.text}</NavWrapper.Item>
+        ))}
+      </NavWrapper.List>
+    </>
+  ),
+};
+
+
+
+export const NavListTwo = [
+    {
+        id: 'one',
+        text: 'Courses'
+    },
+    {
+        id: 'two',
+        text: 'Purchases'
+    },
+    {
+        id: 'three',
+        text: 'Shopping cart'
+    },
+    {
+        id: 'four',
+        text: 'Wishlist'
+    },
+    {
+        id: 'five',
+        text: 'Log out'
     }
-}
+]
+
+export const MenuOpen = Template.bind({});
+MenuOpen.args = {
+  children: (
+    <>
+      <NavWrapper.Nav>Profile</NavWrapper.Nav>
+      <NavWrapper.List>
+        {NavListTwo.map(item => (
+          <NavWrapper.Item key={item.id}>{item.text}</NavWrapper.Item>
+        ))}
+      </NavWrapper.List>
+    </>
+  ),
+  value: true,
+};
+

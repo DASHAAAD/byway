@@ -2,7 +2,7 @@ import React, { createContext, FC, useContext, useState } from "react";
 
 // обёрка всего меню 
 
-interface TypeWrapper {
+export interface TypeWrapper {
     value?: boolean
     setValue?: (value: boolean) => boolean | void
     toggleMenu?: (value: boolean) => boolean | void
@@ -57,8 +57,8 @@ const Nav: FC<TypeWrapper> = (props) => {
             >
                 {props.children}
             </button >
-            {menuOpen && props.children
-            }
+            {/* {menuOpen && props.children
+            } */}
         </>
     )
 }
@@ -90,7 +90,7 @@ const Item = ({ children }: TypeWrapper) => {
 
 // списки и сами элементы li 
 
-const NavList = [
+export const NavList = [
     {
         id: 'one',
         text: 'Another link'
