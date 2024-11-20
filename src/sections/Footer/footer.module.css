@@ -21,12 +21,14 @@
     align-items: center;
 }
 .link {
+    color: #EDEEF0;
     display: flex;
-    font-weight: 500;
+    /* font-weight: 500;
     font-size: 32px;
-    line-height: 40px;
+    line-height: 40px; */
 }
 .text {
+    color: #EDEEF0;
     width: 416px;
 }
 
@@ -39,6 +41,7 @@
 }
 
 .title {
+    color: #EDEEF0;
     font-weight: 600;
     font-size: 24px;
     line-height: 29px;

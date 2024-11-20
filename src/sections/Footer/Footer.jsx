@@ -16,23 +16,23 @@ const Footer = () => {
                 </div>
                 <div className={styles.item}>
                     <h2 className={styles.title}>Get Help</h2>
-                    <p>Contact Us</p>
-                    <p>Latest Articles</p>
-                    <p>FAQ</p>
+                    <p className={styles.link}>Contact Us</p>
+                    <p className={styles.link}>Latest Articles</p>
+                    <p className={styles.link}>FAQ</p>
                 </div>
                 <div className={styles.item}>
-                    <h2 className={styles.title}>Programs</h2>
-                    <p>Art & Design</p>
-                    <p>Business</p>
-                    <p>IT & Software</p>
-                    <p>Languages</p>
-                    <p>Programming</p>
+                    <h2  className={styles.title}>Programs</h2>
+                    <p className={styles.link}>Art & Design</p>
+                    <p className={styles.link}>Business</p>
+                    <p className={styles.link}>IT & Software</p>
+                    <p className={styles.link}>Languages</p>
+                    <p className={styles.link}>Programming</p>
                 </div>
                 <div className={`${styles.item} ${styles.contacts}`}>
                     <h2 className={styles.title}>Contact Us</h2>
-                    <p>Address: Saint-Petersburg, Kronverkskaya st., building 7</p>
-                    <a href="tel:88005553535">Tel: 8(800) 555-35-35</a>
-                    <a href="mailto:bywayedu@webkul.in">Mail: bywayedu@webkul.in</a>
+                    <p className={styles.link}>Address: Saint-Petersburg, Kronverkskaya st., building 7</p>
+                    <a className={styles.link} href="tel:88005553535">Tel: 8(800) 555-35-35</a>
+                    <a className={styles.link} href="mailto:bywayedu@webkul.in">Mail: bywayedu@webkul.in</a>
                 </div>
             </div>
         </div>
