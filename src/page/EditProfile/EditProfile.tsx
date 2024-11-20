@@ -6,6 +6,10 @@ import { Title } from '@/components/Title/Title';
 import React, { FC } from 'react'
 
 
+import {ArrayUserProps} from '../../components/cards/CardUser/CardUser'
+
+const newArr = ArrayUserProps[1]
+
 interface Type {
 
 }
@@ -16,7 +20,8 @@ const EditProfile: FC<Type> = () => {
             <Title text='My profile' />
             {/* лево */}
             <div>
-                <CardUser />
+                <CardUser newArr
+                id={''} placeholder={''} />
                 <Nav />
             </div>
 

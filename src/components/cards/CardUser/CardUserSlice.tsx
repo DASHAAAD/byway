@@ -6,6 +6,7 @@ export interface TypeProps {
     nameUser?: string
     text?: string
     map?: ReactNode;
+    children?: ReactNode
     // image?: HTMLImageElement
 }
 
