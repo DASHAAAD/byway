@@ -13,6 +13,7 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 
+
 export const Default: Story = {
     args: {
         children: (
@@ -50,6 +51,7 @@ export const ListEditProfile = [
         text: 'Log out'
     }
 ]
+
 
 export const MenuEditProfile:Story = {
     args: {

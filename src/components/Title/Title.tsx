@@ -3,12 +3,13 @@ import React, { FC } from 'react'
 import style from './Title.module.css'
 
 interface Type {
-    text: string
+    text: string,
+    className: string
 }
 
-export const Title:FC<Type> = ({text}) => {
+export const Title: FC<Type> = ({ text, className }) => {
     return (
-        <div className={style.title}>{text}</div>
+        <div className={className}>{text}</div>
     )
 }
 
