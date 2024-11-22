@@ -1,35 +1,59 @@
-import React, { FunctionComponent, useState } from 'react'
-import styles from './LoginForm.module.css'
+// /* eslint-disable react-hooks/rules-of-hooks */
+// import React, { FunctionComponent, useState } from "react";
+// import styles from "./LoginForm.module.css";
 
-import ButtonBlack from '@/components/ButtonBlack/ButtonBlack'
-import { Title } from '../../components/Title/Title'
+// import Image from "next/image";
+// import FormItem from "@/components/formItem/FormItem";
+// import { Title } from "@/components/Title/Title";
 
-import girl from '../../image/girl.png'
-import Image from 'next/image'
+// import { auth } from "../../app/firebase";
 
+// import { createUserWithEmailAndPassword } from "firebase/auth";
+// import { ButtonBlack } from "@/components/ButtonBlack/ButtonBlack";
 
+// const [email, setEmail] = useState("");
 
-export const LoginForm: FunctionComponent = () => {
+// const [password, setPassword] = useState("");
+// const [copyPassword, setCopyPassword] = useState("");
+// const [error, setError] = useState("");
 
-  return (
-    <>
-      <div className={styles.container}>
-        <div className={styles.wrapper}>
-          <Title text='Log in to your account' />
-          <form className={styles.form} action="">
-            <h3 className={styles.title}>Email</h3>
-            <input className={styles.input} type="text" placeholder='Email ID' />
-            <h3 className={styles.title}>Password</h3>
-            <input className={styles.input} type="text" placeholder='Enter Password' />
-            {/* /// */}
-            <ButtonBlack text='Sign in' />
+// const Form: FunctionComponent = () => {
+//   const width = {
+//     width: "500px",
+//   };
 
-          </form>
-        </div>
-        <Image src={girl} alt={''} />
-      </div>
-    </>
-  )
-}
+//   function register(e: React.FormEvent<HTMLFormElement>) {
+//     e.preventDefault();
+//     if (copyPassword !== password) {
+//       setError("passwords didnt match");
+//       return;
+//     }
+//     createUserWithEmailAndPassword(auth, email, password).then((user) => {
+//       console.log(user);
+//       setEmail("");
+//       setCopyPassword("");
+//       setPassword("");
+//     });
+//   }
+//   return (
+//     <>
+//       <div className={styles.container}>
+//         <div className={styles.wrapper}>
+//           <Title text="Log in to your account" className={""} />
+//           <form onSubmit={register} className={styles.form} action="">
+//             <input
+//               value={email}
+//               // onChange={()}
+//               title="Email"
+//             />
+//             <FormItem value={password} title="Password" />
+//             <ButtonBlack style={width} text="Sign in" />
+//           </form>
+//         </div>
+//         {/* <Image src={girl} alt={''} /> */}
+//       </div>
+//     </>
+//   );
+// };
 
-
+// export default Form;

@@ -1,5 +1,7 @@
 import { initializeApp } from 'firebase/app';
 import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
+
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -15,8 +17,9 @@ import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
 // };
 
 
-const firebaseConfig = {
-  apiKey: process.env.DB_APIKEY,
+export const firebaseConfig = {
+  apiKey: process.env.NEXT_PUBLIC_API_KEY || 'mock_key',
+  // apiKey: process.env.DB_APIKEY,
   authDomain:  process.env.DB_AUTHDOMAIN,
   databaseURL: process.env.DB_DATABESEURL,
   projectId: process.env.DB_PROJECTID,
@@ -26,7 +29,7 @@ const firebaseConfig = {
   measurementId: process.env.DB_MEASUREMENTID
 };
 
-export const app = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 // Get a list of cities from your database
@@ -36,6 +39,3 @@ async function getCities(db) {
   const cityList = citySnapshot.docs.map(doc => doc.data());
   return cityList;
 }
-// Initialize Firebase
-
-
