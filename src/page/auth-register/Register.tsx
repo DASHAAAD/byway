@@ -5,16 +5,12 @@ import Footer from "@/sections/Footer/Footer";
 import Header from "@/sections/Header/Header";
 import React, { FunctionComponent } from "react";
 import Image from "next/image";
-import girl from "../../image/girl2.png";
+// import girl from "../../image/girl2.png";
 import styles from "../../page/auth-register/Register.module.css";
 
 import { useState } from "react";
 import Input from "@/components/formItem/FormItem";
 import ButtonBlack from "@/components/ButtonBlack/ButtonBlack";
-
-
-import { firebaseConfig } from '../../app/firebase';
-import { initializeApp } from "firebase/app";
 
 import {
 
@@ -23,9 +19,7 @@ import {
 
 } from 'firebase/auth';
 
-initializeApp(firebaseConfig);
 
-const auth = getAuth();
 
 const Register: FunctionComponent = () => {
   const [email, emailInput] = useState("");
@@ -60,7 +54,7 @@ const Register: FunctionComponent = () => {
   return (
     <section>
       <div className={styles.container}>
-        <Image src={girl} alt={""} />
+        {/* <Image src={girl} alt={""} /> */}
         <div className={styles.wrapper}>
           <form action="" onSubmit={handleSignUp}>
             <Input title="Name" placeholder="Name" />

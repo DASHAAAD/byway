@@ -3,12 +3,14 @@ import { configureStore } from '@reduxjs/toolkit';
 import { userSlice } from '@/components/cards/CardUser/CardUserSlice';
 import { coursesSlice } from '@/components/coursesList/coursesListSlice';
 import { CardSlice } from '@/components/cards/ProductCard/ProductCardSlice';
+import { PlaygroundSlise } from '@/page/PlaygrounSlice';
 
 export const store = configureStore({
   reducer: {
     userSlice: userSlice.reducer,
     coursesSlice: coursesSlice.reducer,
-    CardSlice: CardSlice.reducer
+    CardSlice: CardSlice.reducer,
+    PlaygroundSlise: PlaygroundSlise.reducer
   },
 });
 
