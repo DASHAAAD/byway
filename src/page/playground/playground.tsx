@@ -1,31 +1,51 @@
-// import { faker } from '@faker-js/faker';
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { FC, useState } from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { setUser } from "./playgroundSlice";
 
-import { FC } from "react";
+export const Reg: FC = () => {
+  const dispatch = useDispatch();
+  const navigateTo = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-export const Playground:FC = () => {
+  const Log = ({e}) => {
+    const auth = getAuth();
+    signInWithEmailAndPassword(auth, email, password)
+      .then(({ user }) => {
+        console.log(user);
+        dispatch(
+          setUser({
+            email: user.email,
+            id: user.uid,
+            password: user.password,
+          })
+        );
+        navigateTo("/");
+      })
+      .catch(() => alert("Invalid user!"));
+  };
   return (
-    <div>
-      <form>
-        {/* <input
-          style={{ fontSize: "20px", color: "red" }}
-          placeholder="email"
-          onChange={(e) => emailInput(e.currentTarget.value)}
-          value={email}
-          type="text"
-        /> */}
-        <input type="text" />
-        <input type="text" />
-        {/* <input
-          style={{ fontSize: "20px", color: "red" }}
-          placeholder="password"
-          onChange={(e) => passwordInput(e.currentTarget.value)}
-          value={password}
-          type="text"
-        /> */}
-      </form>
-    </div>
+    <form  onClick={Log}>
+      <input
+        style={{ width: "200", height: "200", backgroundColor: "red" }}
+        onChange={(e) => setEmail(e.currentTarget.value)}
+        value={email}
+        placeholder="email"
+      />
+      <input
+        style={{ width: "200", height: "200", backgroundColor: "red", marginBottom: '40px' }}
+        onChange={(e) => setPassword(e.currentTarget.value)}
+        value={password}
+        placeholder="password"
+      />
+      <button
+
+        onClick={() => Log(email, password)}
+    
+        style={{ width: "200px", height: "20px", backgroundColor: "red" }}
+      >отправить</button>
+    </form>
   );
 };
-
-const randomName = faker.person.fullName(); // Rowan Nikolaus
-const randomEmail = faker.internet.email(); // Kassandra.Haley@erich.biz
