@@ -7,6 +7,7 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./store";
 import { Reg } from "@/page/playground/playground";
+import '../page/playground/playgroundSlice'
 
 
 export default function Home() {
