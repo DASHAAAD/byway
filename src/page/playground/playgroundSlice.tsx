@@ -1,19 +1,47 @@
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import {
+  getFirestore,
+  collection,
+  getDocs,
+  deleteDoc,
+  doc,
+} from "firebase/firestore";
 
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { getFirestore, collection, getDocs } from 'firebase/firestore';
-
-export const fetchData = createAsyncThunk('data/fetchData', async () => {
+export const setUserAsyncThunk = createAsyncThunk("data/setUser", async () => {
   try {
     const db = getFirestore();
-    const dataCollection = collection(db, 'usersRedux');
+    const dataCollection = collection(db, "usersRedux");
     const querySnapshot = await getDocs(dataCollection);
-    const data = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+    const data = querySnapshot.docs.map((doc) => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
     return data;
   } catch (error) {
     console.error("Ошибка при получении данных:", error); // Логируем ошибку
     throw error; // Выбрасываем ошибку, чтобы её можно было отследить в компоненте
   }
 });
+
+// изменить данные массива
+
+// export const deleteUserAsyncThunk = createAsyncThunk('data/fetchData', async () => {
+//   const db = getFirestore();
+//     const dataCollection = collection(db, 'usersRedux');
+//     const querySnapshot = await getDocs(dataCollection);
+//     const data = querySnapshot.docs.filter((id) => id !== id);
+//     return data;
+// });
+
+export const deleteUserAsyncThunk = createAsyncThunk(
+  "data/deleteUser",
+  async () => {
+    const db = getFirestore();
+    const dataCollection = collection(db, "usersRedux");
+    const querySnapshot = doc(dataCollection);
+    await deleteDoc(querySnapshot);
+  }
+);
 
 interface user {
   id: string;
@@ -26,8 +54,8 @@ const Users = createSlice({
   name: "user",
   initialState: {
     users: [] as user[],
-    loading: null,
-    error: null,
+    loading: false,
+    error: false,
   },
   reducers: {
     setUser(state, action) {
@@ -51,11 +79,23 @@ const Users = createSlice({
       }
     },
   },
-  extraReducers() {
-
+ 
+  extraReducers: (builder) => {
+     // добавление пользователя
+    builder.addCase(setUserAsyncThunk.fulfilled, (state, action) => {
+      state.users = action.payload as user[];
+      state.loading = false 
+      state.error = false
+    });
+    // удаление пользователя 
+    builder.addCase(deleteUserAsyncThunk.fulfilled, (state, action) => {
+      state.loading = false 
+      state.error = false
+    });
   },
+  
 });
 
-export const { setUser,  deleteUser, updateUser} = Users.actions;
+export const { setUser, deleteUser, updateUser } = Users.actions;
 
-export default Users
+export default Users;
