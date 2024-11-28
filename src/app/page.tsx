@@ -6,8 +6,8 @@ import { BrowserRouter } from "react-router-dom";
 
 import { Provider } from "react-redux";
 import { store } from "./store";
-import { Reg } from "@/page/playground/playground";
 import '../page/playground/playgroundSlice'
+import { Playground } from '@/page/playground/playground';
 
 
 export default function Home() {
@@ -16,7 +16,7 @@ export default function Home() {
       <Provider store={store}>
         <BrowserRouter>
           <Header key={null} type={undefined} props={undefined} />
-          <Reg />
+    <Playground/>
           <Footer />
         </BrowserRouter>
       </Provider>
