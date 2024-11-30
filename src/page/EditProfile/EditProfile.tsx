@@ -1,7 +1,7 @@
 import ButtonBlack from '@/components/ButtonBlack/ButtonBlack';
 import { CardUser } from '@/components/cards/CardUser/CardUser';
 import Input from '@/components/formItem/FormItem';
-import { Nav } from '@/components/NavigationMenu/Nav';
+// import { Nav } from '@/components/NavigationMenu/Nav';
 import { Title } from '@/components/Title/Title';
 import React, { FC } from 'react'
 
@@ -17,7 +17,7 @@ const EditProfile: FC<Type> = () => {
       <div>
         <Title className={styles.title} text='My profile' />
         <CardUser />
-        <Nav />
+        {/* <Nav /> */}
       </div>
       {/* право */}
       <div>

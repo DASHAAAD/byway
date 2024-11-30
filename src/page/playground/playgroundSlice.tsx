@@ -1,3 +1,4 @@
+import { db } from "@/app/firebase";
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import {
   getFirestore,
@@ -9,7 +10,7 @@ import {
 
 export const setUserAsyncThunk = createAsyncThunk("data/setUser", async () => {
   try {
-    const db = getFirestore();
+    
     const dataCollection = collection(db, "usersRedux");
     const querySnapshot = await getDocs(dataCollection);
     const data = querySnapshot.docs.map((doc) => ({
