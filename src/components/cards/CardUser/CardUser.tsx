@@ -1,26 +1,14 @@
-import React, { FC, ReactNode } from 'react'
-
-import { TypeProps } from '../../../slice/CardUserSlice'
+import React, { FC} from 'react'
 import style from './CardUser.module.css'
-import Image from "next/image";
-import man from '../../../image/categoryIcon.png'
-import { ArrayUserProps } from './CardUser.stories'
+interface Type {
+    children?:  React.ReactNode
+}
 
-
-
-export const CardUser: FC<TypeProps> = () => {
+export const CardUser:FC<Type> = ({children}) => {
     return (
         <>
             <div className={style.wrapper}>
-                {ArrayUserProps.map(Item => {
-                    return (
-                        <div className={style.container} key={Item.id}>
-                            <Image src={man} alt={""} />
-                            <h2 className={style.title}>{Item.nameUser}</h2>
-                            <p className={style.text}>{Item.text}</p>
-                        </div>
-                    )
-                })}
+              {children}
             </div>
         </>
     )

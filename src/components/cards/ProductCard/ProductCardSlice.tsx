@@ -6,8 +6,6 @@ interface Type {
     title?: string
     price?: string
     map?: ReactNode
-    // image?: HTMLImageElement
-    // imgUrl?: string
     src?: string
 }
 

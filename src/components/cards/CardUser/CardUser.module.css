@@ -1,6 +1,21 @@
 .wrapper {
+  margin-bottom: 40px;
   display: flex;
   justify-content: space-between;
+  /* user/card */
+
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 24px;
+  gap: 24px;
+
+  width: 400px;
+  height: 321px;
+
+  background-color: #f9f9fb;
+  border-radius: 24px;
 }
 
 .container {
@@ -10,7 +25,7 @@
 }
 
 .img {
-    margin-bottom: 24px;
+  margin-bottom: 24px;
 }
 
 .title {

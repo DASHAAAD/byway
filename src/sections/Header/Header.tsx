@@ -1,23 +1,23 @@
-import React, { FunctionComponent } from "react";
-import Logo from "@/components/logo/Logo";
-
-import Image from "next/image";
-import basket from "../../image/basket.png";
-import search from "../../image/search.png";
-
-import styles from "../Header/header.module.css";
+import React, { FC } from "react";
 import { Link } from "react-router-dom";
+import Image from "next/image";
 
-const Header = ({ ...props }: React.JSX.Element) => {
+import Logo from "@/components/logo/Logo";
+import search from "../../image/search.png";
+import styles from "../Header/header.module.css";
+
+const Header: FC = () => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <div className={styles.logo}>
-          <Logo />
-          <a className={styles.link} href="#">
-            Categories
-          </a>
-        </div>
+       
+          <Link className={styles.logo} to="/">
+            <Logo />
+            <a className={styles.link} href="#">
+              Categories
+            </a>
+          </Link>
+      
         <form className={styles.formWrapper} action="">
           <div className={styles.form}>
             <Image className={styles.svgIcon} src={search} alt={""} />
@@ -28,6 +28,7 @@ const Header = ({ ...props }: React.JSX.Element) => {
             />
           </div>
         </form>
+
         <div className={styles.buttons}>
           <Link className={styles.link} to="/">
             <svg
@@ -46,7 +47,7 @@ const Header = ({ ...props }: React.JSX.Element) => {
                 stroke-linejoin="round"
               />
             </svg>
-            </Link>
+          </Link>
           <Link className={styles.buttonOne} to="/LoginForm">
             Log in
           </Link>
@@ -54,6 +55,7 @@ const Header = ({ ...props }: React.JSX.Element) => {
             Sign up
           </Link>
         </div>
+        
       </div>
     </header>
   );

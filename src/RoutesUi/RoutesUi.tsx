@@ -1,21 +1,20 @@
-
-import Register from '@/page/auth-register/Register'
-import DesignСourses from '@/page/Design-courses/DesignСourses'
-import EditProfile from '@/page/EditProfile/EditProfile'
-import { HomePage } from '@/page/HomePage/HomePage'
-import { Error } from '@/page/error/Error'
-import LoginForm from '@/page/loginForm/LoginForm'
-import { Route, Routes } from 'react-router-dom'
+import Register from "@/page/auth-register/Register";
+import DesignСourses from "@/page/Design-courses/DesignСourses";
+import EditProfile from "@/page/EditProfile/EditProfile";
+import { HomePage } from "@/page/HomePage/HomePage";
+import { Error } from "@/page/error/Error";
+import LoginForm from "@/page/loginForm/LoginForm";
+import { Route, Routes} from "react-router-dom";
 
 export const RoutesUi = () => {
-    return (
-                <Routes>
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="/LoginForm" element={<LoginForm />} />
-                    <Route path="/DesignСourses" element={<DesignСourses />} />
-                    <Route path='/Register' element={<Register />} />
-                    <Route path='/EditProfile' element={<EditProfile />} />
-                    <Route path='/Error' element={<Error />} />
-                </Routes>
-    )
-}
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/LoginForm" element={<LoginForm />} />
+      <Route path="/DesignСourses" element={<DesignСourses />} />
+      <Route path="/Register" element={<Register />} />
+      <Route path="/EditProfile" element={<EditProfile />} />
+      <Route path="/Error" element={<Error />} />
+    </Routes>
+  );
+};

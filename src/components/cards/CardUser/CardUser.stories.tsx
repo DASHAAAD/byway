@@ -68,7 +68,7 @@ export const Default: Story = {
     }
 }
 
-const oneUser = [
+export const OneUserArr = [
     {
         id: 'one',
         nameUser: 'Ronald Richards',
@@ -83,10 +83,10 @@ export const OneUser: Story = {
         children: (
             <>
                 <div className={style.wrapper}>
-                    {oneUser.map(Item => {
+                    {OneUserArr.map(Item => {
                         return (
                             <div className={style.container} key={Item.id}>
-                                <Image src={man} alt={""} />
+                                <Image className={style.img} src={man} alt={""} />
                                 <h2 className={style.title}>{Item.nameUser}</h2>
                                 <p className={style.text}>{Item.text}</p>
                             </div>

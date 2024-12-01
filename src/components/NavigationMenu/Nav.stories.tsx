@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { NavWrapper, TypeWrapper } from './NavWrapper';
+import { NavWrapper} from './NavWrapper';
 import { NavList } from './NavWrapper';
-import { Meta, StoryObj } from '@storybook/react';
+import { StoryObj } from '@storybook/react';
 
 const meta = {
     title: 'NavWrapper',
