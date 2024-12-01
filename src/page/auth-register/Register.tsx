@@ -39,6 +39,7 @@ const Register: FunctionComponent = () => {
       setPassword('')
       navigate('/LoginForm')
     } catch (err) {
+      navigate('/Error')
       console.error(err);
     }
   };

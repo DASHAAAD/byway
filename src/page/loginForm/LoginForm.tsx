@@ -39,6 +39,7 @@ const LoginForm: FunctionComponent = () => {
       navigate('/EditProfile')
     } catch (err) {
       console.error(err);
+      navigate('/Error')
     }
   };
 
