@@ -3,7 +3,8 @@ import { configureStore } from '@reduxjs/toolkit';
 import { userSlice } from '@/components/cards/CardUser/CardUserSlice';
 import { coursesSlice } from '@/components/coursesList/coursesListSlice';
 import { CardSlice } from '@/components/cards/ProductCard/ProductCardSlice';
-import Users from '@/page/playground/playgroundSlice'
+import Users from '@/slice/formSlice';
+
 
 
 export const store = configureStore({

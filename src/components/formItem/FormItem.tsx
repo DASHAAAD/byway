@@ -1,5 +1,3 @@
-import { FunctionComponent } from 'react'
-import styles from '../../components/formItem/FormItem.module.css'
 import React from 'react'
 import clsx from 'clsx'
 
@@ -16,7 +14,7 @@ const Input: React.FC<InputProps> = ({
     <input
         title={title}
         {...props}
-        className={clsx(className, styles.input)}
+        className={className}
     />
 )
 

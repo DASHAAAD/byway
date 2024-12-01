@@ -1,73 +1,73 @@
-// import ButtonBlack from '@/components/ButtonBlack/buttonBlack'
-// import FormItem from '@/components/formItem/FormItem'
-import { Title } from "@/components/Title/Title";
-import Footer from "@/sections/Footer/Footer";
-import Header from "@/sections/Header/Header";
 import React, { FunctionComponent } from "react";
-import Image from "next/image";
-// import girl from "../../image/girl2.png";
-import styles from "../../page/auth-register/Register.module.css";
+import { auth } from "@/app/firebase";
+
+import styles from "./Register.module.css";
 
 import { useState } from "react";
 import Input from "@/components/formItem/FormItem";
 import ButtonBlack from "@/components/ButtonBlack/ButtonBlack";
 
-import {
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { useDispatch } from "react-redux";
+import { setUser } from "@/slice/formSlice";
+import { Title } from "@/components/Title/Title";
 
-  createUserWithEmailAndPassword,
-  getAuth,
+import girl from "../../image/girl2.png";
+import Image from "next/image";
 
-} from 'firebase/auth';
-
-
+import { useNavigate } from 'react-router-dom';
 
 const Register: FunctionComponent = () => {
-  const [email, emailInput] = useState("");
-  const [password, passwordInput] = useState("");
+  const dispatch = useDispatch();
+  const navigate = useNavigate(); 
 
-  const auth = getAuth();
-  function handleSignUp() {
-    if (email.length < 4) {
-      alert("Please enter an email address.");
-      return;
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const signIn = async (e: { preventDefault: (arg0: string) => void; }) => {
+    try {
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      dispatch(setUser({ id: userCredential.user.uid, email, password }));
+      console.log("успешно");
+      e.preventDefault("")
+      setEmail('')
+      setPassword('')
+      navigate('/LoginForm')
+    } catch (err) {
+      console.error(err);
     }
-    if (password.length < 4) {
-      alert("Please enter a password.");
-      return;
-    }
-    // Create user with email and pass.
-    createUserWithEmailAndPassword(auth, email, password).catch(function (
-      error
-    ) {
-      // Handle Errors here.
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      if (errorCode == "auth/weak-password") {
-        alert("The password is too weak.");
-      } else {
-        alert(errorMessage);
-      }
-      console.log(error);
-    });
-  }
+  };
 
   return (
     <section>
-      <div className={styles.container}>
-        {/* <Image src={girl} alt={""} /> */}
-        <div className={styles.wrapper}>
-          <form action="" onSubmit={handleSignUp}>
-            <Input title="Name" placeholder="Name" />
+      <div className={styles.containerR}>
+        <Image className={styles.img} src={girl} alt={""} />
+        <div>
+          <Title text="Create Your Account" className={styles.title} />
+          <form action="" onSubmit={signIn}>
+            <h3 className={styles.subTitle}>Name</h3>
+            <Input title="Name" placeholder="Name" className={styles.input} />
+            <h3 className={styles.subTitle}>Email</h3>
             <Input
-              onChange={(e) => emailInput(e.currentTarget.value)}
-              placeholder="email"
+              title="Email"
+              placeholder="Email"
+              type="email"
+              onChange={(e) => setEmail(e.currentTarget.value)}
+              className={styles.input}
             />
-
+            <h3 className={styles.subTitle}>Password</h3>
             <Input
-              onChange={(e) => passwordInput(e.currentTarget.value)}
+              title="password"
+              type="password"
               placeholder="password"
+              onChange={(e) => setPassword(e.currentTarget.value)}
+              className={styles.input}
             />
-            <ButtonBlack text="Create account" />
+            <ButtonBlack className={styles.button} text={"Create account"} />
           </form>
         </div>
       </div>

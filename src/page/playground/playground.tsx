@@ -5,8 +5,9 @@ import {
   signInWithEmailAndPassword,
 } from "firebase/auth";
 import { useDispatch } from "react-redux";
+import { setUser } from "@/slice/formSlice";
 
-import { setUser, deleteUser } from "./playgroundSlice";
+
 
 export const Playground: FC = () => {
   const dispatch = useDispatch();

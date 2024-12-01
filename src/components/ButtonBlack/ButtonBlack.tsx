@@ -3,7 +3,7 @@ import React from 'react'
 import style from './ButtonBlack.module.css'
 
 interface ButtonBlackProps {
-    text?: string
+    text: string
     style?: React.CSSProperties
     label?: string
     onClick?: () => void

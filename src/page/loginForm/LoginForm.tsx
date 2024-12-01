@@ -1,59 +1,76 @@
-// /* eslint-disable react-hooks/rules-of-hooks */
-// import React, { FunctionComponent, useState } from "react";
-// import styles from "./LoginForm.module.css";
+/* eslint-disable react-hooks/rules-of-hooks */
+import React, { FunctionComponent, useState } from "react";
+import styles from "../auth-register/Register.module.css";
 
-// import Image from "next/image";
-// import FormItem from "@/components/formItem/FormItem";
-// import { Title } from "@/components/Title/Title";
+import { auth } from "../../app/firebase";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
-// import { auth } from "../../app/firebase";
+import { ButtonBlack } from "@/components/ButtonBlack/ButtonBlack";
+import Input from "@/components/formItem/FormItem";
+import { Title } from "@/components/Title/Title";
 
-// import { createUserWithEmailAndPassword } from "firebase/auth";
-// import { ButtonBlack } from "@/components/ButtonBlack/ButtonBlack";
+import Image from "next/image";
+import girl from "../../image/girl.png";
+import { setUser } from "@/slice/formSlice";
+import { useDispatch } from "react-redux";
 
-// const [email, setEmail] = useState("");
 
-// const [password, setPassword] = useState("");
-// const [copyPassword, setCopyPassword] = useState("");
-// const [error, setError] = useState("");
+const LoginForm: FunctionComponent = () => {
 
-// const Form: FunctionComponent = () => {
-//   const width = {
-//     width: "500px",
-//   };
+  const dispatch = useDispatch();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-//   function register(e: React.FormEvent<HTMLFormElement>) {
-//     e.preventDefault();
-//     if (copyPassword !== password) {
-//       setError("passwords didnt match");
-//       return;
-//     }
-//     createUserWithEmailAndPassword(auth, email, password).then((user) => {
-//       console.log(user);
-//       setEmail("");
-//       setCopyPassword("");
-//       setPassword("");
-//     });
-//   }
-//   return (
-//     <>
-//       <div className={styles.container}>
-//         <div className={styles.wrapper}>
-//           <Title text="Log in to your account" className={""} />
-//           <form onSubmit={register} className={styles.form} action="">
-//             <input
-//               value={email}
-//               // onChange={()}
-//               title="Email"
-//             />
-//             <FormItem value={password} title="Password" />
-//             <ButtonBlack style={width} text="Sign in" />
-//           </form>
-//         </div>
-//         {/* <Image src={girl} alt={''} /> */}
-//       </div>
-//     </>
-//   );
-// };
+  const signIn = async (e: { preventDefault: (arg0: string) => void; }) => {
+    try {
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      dispatch(setUser({ id: userCredential.user.uid, email, password }));
+      console.log("успешно");
+      e.preventDefault("")
+      setEmail('')
+      setPassword('')
+    } catch (err) {
+      console.error(err);
+    }
+  };
 
-// export default Form;
+  return (
+    <section>
+        <div className={styles.wrapper}>
+      <div className={styles.container}>
+        
+        <div className={styles.container}>
+          <Title text="Log in to your account    " className={styles.title} />
+          <form action="" onSubmit={signIn}>
+
+            <h3 className={styles.subTitle}>Email</h3>
+            <Input
+              title="Email"
+              placeholder="Email"
+              type="email"
+              onChange={(e) => setEmail(e.currentTarget.value)}
+              className={styles.input}
+            />
+            <h3 className={styles.subTitle}>Password</h3>
+            <Input
+              title="password"
+              type="password"
+              placeholder="password"
+              onChange={(e) => setPassword(e.currentTarget.value)}
+              className={styles.input}
+            />
+            <ButtonBlack className={styles.button} text={"Create account"} />
+          </form>
+        </div>
+      </div>
+      <Image src={girl} alt={""} />
+      </div>
+    </section>
+  );
+};
+
+export default LoginForm;
