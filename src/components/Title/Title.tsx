@@ -1,16 +1,9 @@
-import React, { FC } from 'react'
-
-import style from './Title.module.css'
-
+import React, { FC } from "react";
 interface Type {
-    text: string,
-    className: string
+  text: string;
+  className?: string;
 }
 
 export const Title: FC<Type> = ({ text, className }) => {
-    return (
-        <div className={className}>{text}</div>
-    )
-}
-
-
+  return <h1 className={className}>{text}</h1>;
+};

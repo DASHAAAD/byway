@@ -3,7 +3,7 @@ import type { StoryObj } from "@storybook/react";
 import style from './CardUser.module.css'
 import man from '../../../image/categoryIcon.png'
 import Image from "next/image";
-import { userSlice } from "./CardUserSlice";
+import { userSlice } from "../../../slice/CardUserSlice";
 
 const meta = {
     title: 'default/CardUser',

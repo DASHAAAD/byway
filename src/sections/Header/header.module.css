@@ -36,9 +36,6 @@
   margin-right: 10px;
 }
 
-/* .input {
-    background-color: transparent;
-} */
 
 .buttons {
   display: flex;
@@ -51,17 +48,21 @@
   margin-right: 12px;
 }
 
+.input {
+  background-color: #212225;
+}
+
 .buttonOne {
   margin-right: 24px;
   padding: 8px 24px;
-  color: var(--scheme-dark-Kelp-Primary);
+  color: #1C2024;
   background-color: #0bd8b6;
   border-radius: 24px;
 }
 
 .buttonTwo {
   padding: 8px 24px;
-  color: var(--scheme-dark-Kelp-Primary);
-  background: var(--scheme-dark-Salt-Primary);
+  color: #1C2024;
+  background-color: #9EB1FF;
   border-radius: 24px;
 }

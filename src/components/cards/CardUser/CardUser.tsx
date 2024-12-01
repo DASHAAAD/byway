@@ -1,6 +1,6 @@
 import React, { FC, ReactNode } from 'react'
 
-import { TypeProps } from './CardUserSlice'
+import { TypeProps } from '../../../slice/CardUserSlice'
 import style from './CardUser.module.css'
 import Image from "next/image";
 import man from '../../../image/categoryIcon.png'

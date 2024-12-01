@@ -15,7 +15,7 @@ import { Title } from "@/components/Title/Title";
 import girl from "../../image/girl2.png";
 import Image from "next/image";
 
-import { useNavigate } from 'react-router-dom';
+import {useNavigate } from 'react-router-dom';
 
 const Register: FunctionComponent = () => {
   const dispatch = useDispatch();
@@ -24,7 +24,8 @@ const Register: FunctionComponent = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const signIn = async (e: { preventDefault: (arg0: string) => void; }) => {
+  const signIn = async (e: React.FormEvent) => {
+    e.preventDefault();
     try {
       const userCredential = await createUserWithEmailAndPassword(
         auth,
@@ -33,10 +34,10 @@ const Register: FunctionComponent = () => {
       );
       dispatch(setUser({ id: userCredential.user.uid, email, password }));
       console.log("успешно");
-      e.preventDefault("")
+      e.preventDefault
       setEmail('')
       setPassword('')
-      navigate('/LoginForm')
+      navigate('/EditProfile')
     } catch (err) {
       console.error(err);
     }
@@ -67,7 +68,9 @@ const Register: FunctionComponent = () => {
               onChange={(e) => setPassword(e.currentTarget.value)}
               className={styles.input}
             />
+            
             <ButtonBlack className={styles.button} text={"Create account"} />
+           
           </form>
         </div>
       </div>
