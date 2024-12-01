@@ -1,23 +1,74 @@
+.wrapper {
+  padding: 40px 0;
+}
+
 .flex {
   display: flex;
   column-gap: 40px;
 }
 
 .title {
+  margin-bottom: 40px;
   font-family: "Fira Sans Condensed";
   font-style: normal;
   font-weight: 500;
   font-size: 40px;
   line-height: 48px;
-
   color: rgba(28, 32, 36, 0.92);
 }
 
+.input {
+  margin-bottom: 24px;
+  padding: 12px 24px;
+  gap: 8px;
+  width: 840px;
+  height: 48px;
+  color: #1c2024;
+  background-color: #fcfcfd;
+  border-radius: 24px;
+}
+
 .subtitle {
+  margin-bottom: 6px;
   font-family: "Fira Sans Condensed";
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 24px;
   color: #0f172a;
+}
+
+.info {
+  margin-bottom: 30px;
+  padding: 12px 24px;
+  background: #fcfcfd;
+  border-radius: 24px;
+}
+
+.list {
+  padding: 30px 0;
+}
+
+.text,
+.listText {
+  color: #0f172a;
+}
+
+.listItem {
+  margin-bottom: 6px;
+}
+
+.button {
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 8px 24px;
+gap: 8px;
+
+width: 840px;
+height: 48px;
+
+background: #111113;
+border-radius: 24px;
 }

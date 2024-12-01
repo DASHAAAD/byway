@@ -4,7 +4,7 @@ import { auth } from "@/app/firebase";
 import styles from "./Register.module.css";
 
 import { useState } from "react";
-import Input from "@/components/formItem/FormItem";
+import Input from "@/components/Input/Input";
 import ButtonBlack from "@/components/ButtonBlack/ButtonBlack";
 
 import { createUserWithEmailAndPassword } from "firebase/auth";

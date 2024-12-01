@@ -6,7 +6,7 @@ import { auth } from "../../app/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 
 import { ButtonBlack } from "@/components/ButtonBlack/ButtonBlack";
-import Input from "@/components/formItem/FormItem";
+import Input from "@/components/Input/Input";
 import { Title } from "@/components/Title/Title";
 
 import Image from "next/image";
