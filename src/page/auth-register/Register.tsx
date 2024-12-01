@@ -37,7 +37,7 @@ const Register: FunctionComponent = () => {
       e.preventDefault
       setEmail('')
       setPassword('')
-      navigate('/EditProfile')
+      navigate('/LoginForm')
     } catch (err) {
       console.error(err);
     }

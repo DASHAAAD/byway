@@ -13,15 +13,19 @@ import Image from "next/image";
 import girl from "../../image/girl.png";
 import { setUser } from "@/slice/formSlice";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 
 const LoginForm: FunctionComponent = () => {
 
   const dispatch = useDispatch();
+  const navigate = useNavigate(); 
+  
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const signIn = async (e: { preventDefault: (arg0: string) => void; }) => {
+  const signIn = async (e: React.FormEvent) => {
+    e.preventDefault()
     try {
       const userCredential = await signInWithEmailAndPassword(
         auth,
@@ -30,9 +34,9 @@ const LoginForm: FunctionComponent = () => {
       );
       dispatch(setUser({ id: userCredential.user.uid, email, password }));
       console.log("успешно");
-      e.preventDefault("")
       setEmail('')
       setPassword('')
+      navigate('/EditProfile')
     } catch (err) {
       console.error(err);
     }

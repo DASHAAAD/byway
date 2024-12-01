@@ -6,7 +6,6 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./store";
 import { RoutesUi } from "@/RoutesUi/RoutesUi";
-import EditProfile from "@/page/EditProfile/EditProfile";
 
 
 export default function Home() {
@@ -15,8 +14,7 @@ export default function Home() {
       <Provider store={store}>
         <BrowserRouter>
           <Header key={null} type={undefined} props={undefined} />
-          {/* <RoutesUi /> */}
-          <EditProfile/>
+          <RoutesUi />
           <Footer />
         </BrowserRouter>
       </Provider>
