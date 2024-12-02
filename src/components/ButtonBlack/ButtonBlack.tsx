@@ -6,7 +6,7 @@ interface ButtonBlackProps {
     text: string
     style?: React.CSSProperties
     label?: string
-    onClick?: () => void
+    onClick?: (e: React.MouseEvent<HTMLButtonElement>) => Promise<void>
     backgroundColor?: string
     className?: string
     width?: string
@@ -15,11 +15,13 @@ interface ButtonBlackProps {
 
 
 export const ButtonBlack = ({
+    onClick, 
     ...props
 }: ButtonBlackProps) => {
     return (
         <button 
         className={style.button}
+        onClick={onClick}
         {...props}
         >{props.text}</button>
     )

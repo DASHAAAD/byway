@@ -4,6 +4,7 @@ import { userSlice } from '@/slice/CardUserSlice';
 import { coursesSlice } from '@/components/coursesList/coursesListSlice';
 import { CardSlice } from '@/components/cards/ProductCard/ProductCardSlice';
 import Users from '@/slice/formSlice';
+import { TextSlice } from '@/slice/TextSlice';
 
 
 
@@ -12,7 +13,8 @@ export const store = configureStore({
     userSlice: userSlice.reducer,
     coursesSlice: coursesSlice.reducer,
     CardSlice: CardSlice.reducer,
-    UsersSlice: Users.reducer
+    UsersSlice: Users.reducer,
+    TextSlice: TextSlice.reducer
   },
 });
 

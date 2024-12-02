@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, FunctionComponent, useState } from "react";
 import styles from "./EditProfile.module.css";
 import { List } from "./List";
 
@@ -11,9 +11,26 @@ import { NavWrapper } from "@/components/NavigationMenu/NavWrapper";
 import { CardUser } from "@/components/cards/CardUser/CardUser";
 import { OneUser } from "@/components/cards/CardUser/CardUser.stories";
 import { Container } from "@/components/Container";
+import { useDispatch } from "react-redux";
+import { addText } from "@/slice/TextSlice";
+import { useNavigate } from "react-router-dom";
+import { nanoid } from "@reduxjs/toolkit";
 
-interface Type {}
-const EditProfile: FC<Type> = () => {
+const EditProfile: FunctionComponent = () => {
+  const [name, setName] = useState("");
+  const [headline, setHeadline] = useState("");
+  const [language, setLanguage] = useState("");
+  const [LinksOne, setLinksOne] = useState("");
+  const [LinkstWO, setLinksTwo] = useState("");
+  const [LinksThree, setLinksThree] = useState("");
+
+  const dispatch = useDispatch();
+
+  const handleSubmit = async () => {
+    dispatch(
+      addText({ name, headline, language, LinksOne, LinkstWO, LinksThree })
+    );
+  };
   return (
     <Container>
       <div className={styles.wrapper}>
@@ -27,11 +44,16 @@ const EditProfile: FC<Type> = () => {
             <ul>
               <li>
                 <h3 className={styles.subtitle}>Name</h3>
-                <Input className={styles.input} placeholder="Ronald Richards" />
+                <Input
+                  onChange={(e) => setName(e.currentTarget.value)}
+                  className={styles.input}
+                  placeholder="Ronald Richards"
+                />
               </li>
               <li>
                 <h3 className={styles.subtitle}>Headline</h3>
                 <Input
+                  onChange={(e) => setHeadline(e.currentTarget.value)}
                   className={styles.input}
                   placeholder="Web developer, UX/UI Designer, and Teacher"
                 />
@@ -67,21 +89,35 @@ const EditProfile: FC<Type> = () => {
               </div>
               <div>
                 <h3 className={styles.subtitle}>Language</h3>
-                <Input className={styles.input} placeholder="English" />
+                <Input
+                  onChange={(e) => setLanguage(e.currentTarget.value)}
+                  className={styles.input}
+                  placeholder="English"
+                />
               </div>
               <div>
                 <h3 className={styles.subtitle}>Links</h3>
                 <Input
+                  onChange={(e) => setLinksOne(e.currentTarget.value)}
                   className={styles.input}
                   placeholder="twitter.com/johndoe"
                 />
                 <Input
+                  onChange={(e) => setLinksTwo(e.currentTarget.value)}
                   className={styles.input}
                   placeholder="instagram.com/johndoe"
                 />
-                <Input className={styles.input} placeholder="byway.com" />
+                <Input
+                  onChange={(e) => setLinksThree(e.currentTarget.value)}
+                  className={styles.input}
+                  placeholder="byway.com"
+                />
               </div>
-              <ButtonBlack className={styles.button} text="Save changes" />
+              <ButtonBlack
+                className={styles.button}
+                text="Save changes"
+                onClick={handleSubmit}
+              />
             </div>
           </div>
         </div>
