@@ -93,19 +93,19 @@ export const SectionCourses: FC = () => {
   );
 };
 
-export const SectionInstructors: FC = () => {
-  return (
-    <section className={style.section}>
-      <div>
-      <div className={style.flex}>
-        <Title text="Top Instructors" className={style.title} />
-        <ButtonBlack text="See all" className={style.buttonSmall}/>
-      </div>
-        <CardUser />
-      </div>
-    </section>
-  );
-};
+// export const SectionInstructors: FC = () => {
+//   return (
+//     <section className={style.section}>
+//       <div>
+//       <div className={style.flex}>
+//         <Title text="Top Instructors" className={style.title} />
+//         <ButtonBlack text="See all" className={style.buttonSmall}/>
+//       </div>
+//         <CardUser />
+//       </div>
+//     </section>
+//   );
+// };
 
 export const SectionBecomeAnInstructor: FC = () => {
   return (
@@ -150,7 +150,7 @@ export const HomePage: FC = () => {
       <SectionAdvertisement />
       <SectionCategories />
       <SectionCourses />
-      <SectionInstructors />
+      {/* <SectionInstructors /> */}
       <SectionBecomeAnInstructor />
       <SectionСhanges />
     </div>

@@ -5,6 +5,7 @@ import { HomePage } from "@/page/HomePage/HomePage";
 import { Error } from "@/page/error/Error";
 import LoginForm from "@/page/loginForm/LoginForm";
 import { Route, Routes} from "react-router-dom";
+import { Profile } from "@/page/Profile/Profile";
 
 export const RoutesUi = () => {
   return (
@@ -14,6 +15,7 @@ export const RoutesUi = () => {
       <Route path="/DesignСourses" element={<DesignСourses />} />
       <Route path="/Register" element={<Register />} />
       <Route path="/EditProfile" element={<EditProfile />} />
+      <Route path="/Profile" element={ <Profile />} />
       <Route path="/Error" element={<Error />} />
     </Routes>
   );

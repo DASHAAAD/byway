@@ -7,8 +7,6 @@ import { Provider } from "react-redux";
 import { store } from "./store";
 import { RoutesUi } from "@/RoutesUi/RoutesUi";
 import EditProfile from "@/page/EditProfile/EditProfile";
-import { Playground } from "@/page/playground/playground";
-
 
 export default function Home() {
   return (
@@ -16,9 +14,7 @@ export default function Home() {
       <Provider store={store}>
         <BrowserRouter>
           <Header />
-          {/* <RoutesUi /> */}
-          <EditProfile/>
-          <Playground/>
+          <RoutesUi />
           <Footer />
         </BrowserRouter>
       </Provider>

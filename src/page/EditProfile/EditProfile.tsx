@@ -14,7 +14,6 @@ import { Container } from "@/components/Container";
 import { useDispatch } from "react-redux";
 import { addText } from "@/slice/TextSlice";
 import { useNavigate } from "react-router-dom";
-import { nanoid } from "@reduxjs/toolkit";
 
 const EditProfile: FunctionComponent = () => {
   const [name, setName] = useState("");
@@ -25,11 +24,13 @@ const EditProfile: FunctionComponent = () => {
   const [LinksThree, setLinksThree] = useState("");
 
   const dispatch = useDispatch();
+  const navigate = useNavigate(); 
 
   const handleSubmit = async () => {
     dispatch(
       addText({ name, headline, language, LinksOne, LinkstWO, LinksThree })
     );
+    navigate('/Profile')
   };
   return (
     <Container>
