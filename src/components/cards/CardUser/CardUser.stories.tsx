@@ -32,7 +32,7 @@ export const ArrayUserProps = [
     },
 
     {
-        id: 'two',
+        id: 'three',
         nameUser: 'Ronald Richards',
         text: 'UI/UX Designer',
         imgUrl: man,
@@ -40,7 +40,7 @@ export const ArrayUserProps = [
     },
 
     {
-        id: 'two',
+        id: 'four',
         nameUser: 'Ronald Richards',
         text: 'UI/UX Designer',
         imgUrl: man,

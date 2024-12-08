@@ -4,12 +4,12 @@ import logo from '../../image/logo.svg'
 
 const Logo:FunctionComponent = () => {
   return (
-    <a href="#">
+    <div>
       <Image
         src={logo}
         alt="logo"
       />
-    </a>
+    </div>
   )
 }
 

@@ -15,21 +15,21 @@ export const ArrayProductCard = [
         imgUrl: img
     },
     {
-        id: 'one',
+        id: 'two',
         title: 'Beginner’s Guide to Design',
         text: 'By Ronald Richards',
         price: '$149.9',
         imgUrl: img
     },
     {
-        id: 'one',
+        id: 'three',
         title: 'Beginner’s Guide to Design',
         text: 'By Ronald Richards',
         price: '$149.9',
         imgUrl: img
     },
     {
-        id: 'one',
+        id: 'four',
         title: 'Beginner’s Guide to Design',
         text: 'By Ronald Richards',
         price: '$149.9',
