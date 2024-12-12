@@ -1,22 +1,22 @@
 import React from "react";
 import Image from "next/image";
-import astrology from "../../image/astrology.png";
-import styles from "./AstrologyCards.module.css";
+import astrologyImg from "@/image/astrology.png";
+import styles from "./categories-card-styles.module.css";
 
 interface AstrologyProps {
   title: string;
   text: string;
 }
 
-export const AstrologyCards = ({ title, text }: AstrologyProps) => {
+export const СategoriesСard = ({ title, text }: AstrologyProps) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.img}>
-        <Image src={astrology} alt={""} />
+        <Image src={astrologyImg} alt={""} />
       </div>
       <div>
         <h2 className={styles.title}>{title}</h2>
-        <p>{text}</p>
+        <p className={styles.text}>{text}</p>
       </div>
     </div>
   );

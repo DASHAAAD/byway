@@ -1,7 +1,6 @@
 
 import React, { FunctionComponent } from 'react'
-import styles from '../../page/Design-courses/DesignCourses.module.css'
-
+import styles from './design-courses-styles.module.css'
 import Rating from '@mui/material/Rating';
 import Stack from '@mui/material/Stack';
 const DesignСourses: FunctionComponent = () => {

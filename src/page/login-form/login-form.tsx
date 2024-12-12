@@ -1,11 +1,11 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { FunctionComponent, useState } from "react";
-import styles from "../auth-register/Register.module.css";
+import styles from "../auth-register/auth-register-styles.module.css";
 
 import { auth } from "../../app/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 
-import { ButtonBlack } from "@/components/button/button";
+import Button from "@/components/button/button";
 import Input from "@/components/input/input";
 import { Title } from "@/components/title/title";
 
@@ -14,6 +14,8 @@ import girl from "../../image/girl.png";
 import { setUser } from "@/slice/form-slice";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { ButtonLarge } from "@/components/button/button-ui.stories";
+import { TitleDefault } from "@/components/title/title-ui.stories";
 
 
 const LoginForm: FunctionComponent = () => {
@@ -49,7 +51,11 @@ const LoginForm: FunctionComponent = () => {
       <div className={styles.container}>
         
         <div className={styles.container}>
-          <Title text="Log in to your account    " className={styles.title} />
+          <Title
+            className={styles.mb24}
+            {...TitleDefault.args}
+            text="Log in to your account"
+          />
           <form action="" onSubmit={signIn}>
 
             <h3 className={styles.subTitle}>Email</h3>
@@ -68,7 +74,10 @@ const LoginForm: FunctionComponent = () => {
               onChange={(e) => setPassword(e.currentTarget.value)}
               className={styles.input}
             />
-            <ButtonBlack className={styles.button} text={"Create account"} />
+          
+            <Button {...ButtonLarge.args}
+                text="Create account"
+              />
           </form>
         </div>
       </div>

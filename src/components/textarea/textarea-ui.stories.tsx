@@ -1,5 +1,6 @@
 import type { StoryObj } from "@storybook/react";
-import TextArea from "./TextArea";
+import TextArea from "./textarea";
+
 
 const meta = {
     title: "default/TextArea",

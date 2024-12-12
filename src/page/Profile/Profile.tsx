@@ -1,6 +1,6 @@
 import React, { FC, useState } from "react";
 import { useSelector } from "react-redux";
-import styles from "./Profile.module.css";
+import styles from "./profile-styles.module.css";
 
 import { Container } from "@/components/Container";
 import { Title } from "@/components/title/title";
@@ -9,7 +9,8 @@ import { List } from "../edit-profile/edit-profile-list";
 import Image from "next/image";
 import user from "@/image/avatar.png";
 import { ProductCard } from "@/components/cards/product-card/product-card";
-import { CardReviews } from "@/components/cards/reviews-card/reviews-card";
+import { ReviewsCard } from "@/components/cards/reviews-card/reviews-card";
+
 
 interface Type {
   TextSlice: {
@@ -86,7 +87,7 @@ export const Profile: FC = () => {
 
       <section>
       <Title className={styles.subTitle} text="Courses Reviews"/>
-      <CardReviews />
+      <ReviewsCard />
       </section>
 
     </Container>

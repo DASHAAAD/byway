@@ -1,13 +1,13 @@
 import React, { FC} from 'react'
-import style from './CardUser.module.css'
 interface Type {
     children?:  React.ReactNode
+    className?: string
 }
 
-export const CardUser:FC<Type> = ({children}) => {
+export const CardUser:FC<Type> = ({children, className}) => {
     return (
         <>
-            <div className={style.wrapper}>
+            <div className={className} >
               {children}
             </div>
         </>

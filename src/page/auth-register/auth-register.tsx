@@ -1,11 +1,10 @@
 import React, { FunctionComponent } from "react";
 import { auth } from "@/app/firebase";
 
-import styles from "./Register.module.css";
+import styles from "./auth-register-styles.module.css";
 
 import { useState } from "react";
 import Input from "@/components/input/input";
-import ButtonBlack from "@/components/button/button";
 
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useDispatch } from "react-redux";
@@ -16,6 +15,8 @@ import girl from "../../image/girl2.png";
 import Image from "next/image";
 
 import {useNavigate } from 'react-router-dom';
+import { ButtonLarge } from "@/components/button/button-ui.stories";
+import Button from "@/components/button/button";
 
 const Register: FunctionComponent = () => {
   const dispatch = useDispatch();
@@ -70,7 +71,7 @@ const Register: FunctionComponent = () => {
               className={styles.input}
             />
             
-            <ButtonBlack className={styles.button} text={"Create account"} />
+            <Button {...ButtonLarge.args} text={"Create account"} />
            
           </form>
         </div>

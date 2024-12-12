@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 
-import style from './coursesList.module.css'
+import style from './courses-list-styles.module.css'
 
 export const ArrCourses = [
     {

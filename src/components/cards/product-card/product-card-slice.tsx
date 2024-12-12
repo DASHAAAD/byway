@@ -9,8 +9,7 @@ interface Type {
     src?: string
 }
 
-
-export const CardSlice = createSlice({
+export const ProductCard = createSlice({
     name: 'Card',
     initialState: [] as Type[],
     reducers: {

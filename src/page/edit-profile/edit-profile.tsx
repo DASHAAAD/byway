@@ -1,11 +1,7 @@
-import React, { FC, FunctionComponent, useState } from "react";
-import styles from "./EditProfile.module.css";
+import React, { FunctionComponent, useState } from "react";
+import styles from "./edit-profile-styles.module.css";
 import { List } from "./edit-profile-list";
-
-import ButtonBlack from "@/components/button/button";
-
 import Input from "@/components/input/input";
-import { Title } from "@/components/title/title";
 import { MenuEditProfile } from "@/components/menu/menu-ui.stories";
 import { NavWrapper } from "@/components/menu/menu";
 import { CardUser } from "@/components/cards/user-card/user-card";
@@ -14,6 +10,10 @@ import { Container } from "@/components/Container";
 import { useDispatch } from "react-redux";
 import { addText } from "@/slice/text-slice";
 import { useNavigate } from "react-router-dom";
+import { ButtonLarge } from "@/components/button/button-ui.stories";
+import Button from "@/components/button/button";
+import { Title } from "@/components/title/title";
+import { TitleDefault } from "@/components/title/title-ui.stories";
 
 const EditProfile: FunctionComponent = () => {
   const [name, setName] = useState("");
@@ -35,10 +35,14 @@ const EditProfile: FunctionComponent = () => {
   return (
     <Container>
       <div className={styles.wrapper}>
-        <Title className={styles.title} text="My profile" />
+      <Title
+            className={styles.mb40}
+            {...TitleDefault.args}
+            text="My profile"
+          />
         <div className={styles.flex}>
-          <div>
-            <CardUser {...OneUser.args} />
+          <div className={styles.left}>
+            <CardUser {...OneUser.args} className={styles.mb40}/>
             <NavWrapper {...MenuEditProfile.args} />
           </div>
           <div>
@@ -114,8 +118,7 @@ const EditProfile: FunctionComponent = () => {
                   placeholder="byway.com"
                 />
               </div>
-              <ButtonBlack
-                className={styles.button}
+              <Button {...ButtonLarge.args}
                 text="Save changes"
                 onClick={handleSubmit}
               />

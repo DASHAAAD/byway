@@ -1,9 +1,10 @@
 import React, { FC } from "react";
 interface Type {
-  text: string;
+  text?: string;
   className?: string;
+  style?: React.CSSProperties
 }
 
-export const Title: FC<Type> = ({ text, className }) => {
-  return <h1 className={className}>{text}</h1>;
+export const Title: FC<Type> = ({ text, ...props}) => {
+  return (<h4 {...props}>{text}</h4>);
 };

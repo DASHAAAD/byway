@@ -1,8 +1,7 @@
-import React from "react";
-import style from '@/components/ButtonBlack/ButtonBlack.module.css'
-
+import React, { FC } from "react";
+import style from "./button-styles.module.css";
 interface ButtonBlackProps {
-  text: string;
+  text?: string;
   style?: React.CSSProperties;
   label?: string;
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => Promise<void>;
@@ -10,12 +9,7 @@ interface ButtonBlackProps {
   width?: string;
 }
 
-export const Button = ({ onClick, ...props }: ButtonBlackProps) => {
-  return (
-    <button className={style.button} onClick={onClick} {...props} >
-      {props.text}
-    </button>
-  );
+const Button: FC<ButtonBlackProps> = (item) => {
+  return <button onClick={item.onClick} className={style.button} {...item}>{item.text}</button>;
 };
-
-export default Button;
+ export default Button

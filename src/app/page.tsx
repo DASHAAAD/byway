@@ -6,7 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./store";
 import { RoutesUi } from "@/snake-case - router-ui/snake-case - router-ui";
-import EditProfile from "@/page/edit-profile/edit-profile";
+
 
 export default function Home() {
   return (

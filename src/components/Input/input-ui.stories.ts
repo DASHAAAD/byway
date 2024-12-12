@@ -1,15 +1,15 @@
 import type { StoryObj } from "@storybook/react";
-import FormItem from "./input";
+import Input from "./input";
 
 const meta = {
   title: "default/FormItem",
-  component: FormItem,
+  component: Input,
 };
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const DefaultFormItem: Story = {
+export const DefaulInput: Story = {
   args: {
     className: 'CLASS FORMITE,',
     title: 'TITLE FORMITEM',

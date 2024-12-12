@@ -1,8 +1,10 @@
-import type { Meta, StoryObj } from "@storybook/react";
-import { fn } from "@storybook/test";
-import { Button } from "./button";
+import React from 'react';
 
-const meta: Meta<typeof Button> = {
+import type {  StoryObj } from "@storybook/react";
+import { fn } from "@storybook/test";
+import Button from "./button";
+
+const meta = {
   title: "default/Button",
   component: Button,
   args: { onClick: fn() },
@@ -11,7 +13,6 @@ const meta: Meta<typeof Button> = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-
 // общие стили
 const styles: React.CSSProperties = {
   display: "flex",
@@ -19,10 +20,11 @@ const styles: React.CSSProperties = {
   justifyContent: "center",
   alignItems: "center",
   padding: "8px 24px",
+  height: '48px',
   gap: "8px",
   color: "#EDEEF0",
   backgroundColor: "black",
-  content: ">",
+  borderRadius: '24px'
 };
 
 export const ButtonSmall: Story = {
