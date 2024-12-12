@@ -38,7 +38,7 @@
     "src/components/card/Card.tsx",
     "firebase.js",
     "src/sections/Header/Header.stories.jsx",
-    "src/components/ButtonBlack/ButtonBlack.stories.ts",
+    "src/components/button/button-ui.stories.ts",
     "src/app/firebase/firebase.оы"
   ],
   "exclude": [

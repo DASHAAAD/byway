@@ -5,8 +5,8 @@ import Header from "@/sections/Header/Header";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { store } from "./store";
-import { RoutesUi } from "@/RoutesUi/RoutesUi";
-import EditProfile from "@/page/EditProfile/EditProfile";
+import { RoutesUi } from "@/snake-case - router-ui/snake-case - router-ui";
+import EditProfile from "@/page/edit-profile/edit-profile";
 
 export default function Home() {
   return (

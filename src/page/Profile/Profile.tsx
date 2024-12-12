@@ -3,13 +3,13 @@ import { useSelector } from "react-redux";
 import styles from "./Profile.module.css";
 
 import { Container } from "@/components/Container";
-import { Title } from "@/components/Title/Title";
-import { List } from "../EditProfile/List";
+import { Title } from "@/components/title/title";
+import { List } from "../edit-profile/edit-profile-list";
 
 import Image from "next/image";
 import user from "@/image/avatar.png";
-import { ProductCard } from "@/components/cards/ProductCard/ProductCard";
-import { CardReviews } from "@/components/cards/CardReviews/CardReviews";
+import { ProductCard } from "@/components/cards/product-card/product-card";
+import { CardReviews } from "@/components/cards/reviews-card/reviews-card";
 
 interface Type {
   TextSlice: {

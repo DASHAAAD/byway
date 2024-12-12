@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
 
-import { userSlice } from '@/slice/CardUserSlice';
-import { coursesSlice } from '@/components/coursesList/coursesListSlice';
-import { CardSlice } from '@/components/cards/ProductCard/ProductCardSlice';
-import Users from '@/slice/formSlice';
-import { TextSlice } from '@/slice/TextSlice';
+import { userSlice } from '@/slice/card-user-slice';
+import { coursesSlice } from '@/components/courses-list/courses-list-slice';
+import { CardSlice } from '@/components/cards/product-card/product-card-slice';
+import Users from '@/slice/form-slice';
+import { TextSlice } from '@/slice/text-slice';
 
 
 

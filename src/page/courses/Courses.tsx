@@ -1,11 +1,11 @@
 /* eslint-disable react/jsx-key */
-import { CardUser } from '@/components/cards/CardUser/CardUser'
-import { ProductCard } from '@/components/cards/ProductCard/ProductCard'
-import { Title } from '@/components/Title/Title'
+import { CardUser } from '@/components/cards/user-card/user-card'
+import { ProductCard } from '@/components/cards/product-card/product-card'
+import { Title } from '@/components/title/title'
 import React, { FC } from 'react'
 
-import { ArrayProductCard } from '../../components/cards/ProductCard/ProductCard'
-import { CoursesList } from '@/components/coursesList/coursesList'
+import { ArrayProductCard } from '../../components/cards/product-card/product-card'
+import { CoursesList } from '@/components/courses-list/courses-list'
 import styles from './Courses.module.css';
 
 ArrayProductCard.splice(3)
