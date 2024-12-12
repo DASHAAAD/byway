@@ -7,7 +7,6 @@ import { Provider } from "react-redux";
 import { store } from "./store";
 import { RoutesUi } from "@/snake-case - router-ui/snake-case - router-ui";
 
-
 export default function Home() {
   return (
     <>

@@ -11,7 +11,6 @@ import user from "@/image/avatar.png";
 import { ProductCard } from "@/components/cards/product-card/product-card";
 import { ReviewsCard } from "@/components/cards/reviews-card/reviews-card";
 
-
 interface Type {
   TextSlice: {
     name: string;
@@ -24,13 +23,11 @@ interface Type {
 }
 
 export const Profile: FC = () => {
-
   const { name, headline, language, LinksOne, LinkstWO, LinksThree } =
     useSelector((state: Type) => state.TextSlice);
 
   return (
     <Container>
-
       <Title className={styles.name} text={name} />
       <section className={styles.wrapper}>
         <div className={styles.info}>
@@ -81,15 +78,14 @@ export const Profile: FC = () => {
       </section>
 
       <section>
-        <Title className={styles.subTitle} text="Courses by Ronald Richards"/>
-        <ProductCard/>
+        <Title className={styles.subTitle} text="Courses by Ronald Richards" />
+        <ProductCard />
       </section>
 
       <section>
-      <Title className={styles.subTitle} text="Courses Reviews"/>
-      <ReviewsCard />
+        <Title className={styles.subTitle} text="Courses Reviews" />
+        <ReviewsCard />
       </section>
-
     </Container>
   );
 };

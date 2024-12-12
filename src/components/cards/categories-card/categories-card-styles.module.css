@@ -33,11 +33,11 @@
 }
 
 .text {
-font-family: 'Fira Sans Condensed';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 24px;
+  font-family: "Fira Sans Condensed";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
 
-color: rgba(28, 32, 36, 0.74);
+  color: rgba(28, 32, 36, 0.74);
 }

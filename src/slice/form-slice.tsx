@@ -10,7 +10,6 @@ import {
 
 export const setUserAsyncThunk = createAsyncThunk("data/setUser", async () => {
   try {
-    
     const dataCollection = collection(db, "usersRedux");
     const querySnapshot = await getDocs(dataCollection);
     const data = querySnapshot.docs.map((doc) => ({
@@ -41,7 +40,7 @@ export const deleteUserAsyncThunk = createAsyncThunk(
     const dataCollection = collection(db, "usersRedux");
     const querySnapshot = doc(dataCollection);
     await deleteDoc(querySnapshot);
-  }
+  },
 );
 
 interface user {
@@ -80,21 +79,20 @@ const Users = createSlice({
       }
     },
   },
- 
+
   extraReducers: (builder) => {
-     // добавление пользователя
+    // добавление пользователя
     builder.addCase(setUserAsyncThunk.fulfilled, (state, action) => {
       state.users = action.payload as user[];
-      state.loading = false 
-      state.error = false
+      state.loading = false;
+      state.error = false;
     });
-    // удаление пользователя 
+    // удаление пользователя
     builder.addCase(deleteUserAsyncThunk.fulfilled, (state, action) => {
-      state.loading = false 
-      state.error = false
+      state.loading = false;
+      state.error = false;
     });
   },
-  
 });
 
 export const { setUser, deleteUser, updateUser } = Users.actions;

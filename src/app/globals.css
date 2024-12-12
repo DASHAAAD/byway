@@ -25,7 +25,11 @@ body {
   color: rgba(237, 238, 240, 0.82);
 }
 
-p,h3,h4,span,a {
+p,
+h3,
+h4,
+span,
+a {
   font-family: "Fira Sans";
   font-style: normal;
   font-weight: 400;

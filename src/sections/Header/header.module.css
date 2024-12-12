@@ -36,7 +36,6 @@
   margin-right: 10px;
 }
 
-
 .buttons {
   display: flex;
   justify-content: space-between;
@@ -55,14 +54,14 @@
 .buttonOne {
   margin-right: 24px;
   padding: 8px 24px;
-  color: #1C2024;
+  color: #1c2024;
   background-color: #0bd8b6;
   border-radius: 24px;
 }
 
 .buttonTwo {
   padding: 8px 24px;
-  color: #1C2024;
-  background-color: #9EB1FF;
+  color: #1c2024;
+  background-color: #9eb1ff;
   border-radius: 24px;
 }

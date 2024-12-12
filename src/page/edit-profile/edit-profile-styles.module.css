@@ -10,14 +10,13 @@
 .left {
   display: flex;
   flex-direction: column;
- align-items: center;
+  align-items: center;
 }
 
 /* margin  */
 .mb40 {
   margin-bottom: 40px;
 }
-
 
 .input {
   margin-bottom: 24px;
@@ -59,4 +58,3 @@
 .listItem {
   margin-bottom: 6px;
 }
-

@@ -17,71 +17,65 @@ import { useNavigate } from "react-router-dom";
 import { ButtonLarge } from "@/components/button/button-ui.stories";
 import { TitleDefault } from "@/components/title/title-ui.stories";
 
-
 const LoginForm: FunctionComponent = () => {
-
   const dispatch = useDispatch();
-  const navigate = useNavigate(); 
-  
+  const navigate = useNavigate();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const signIn = async (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     try {
       const userCredential = await signInWithEmailAndPassword(
         auth,
         email,
-        password
+        password,
       );
       dispatch(setUser({ id: userCredential.user.uid, email, password }));
       console.log("успешно");
-      setEmail('')
-      setPassword('')
-      navigate('/EditProfile')
+      setEmail("");
+      setPassword("");
+      navigate("/EditProfile");
     } catch (err) {
       console.error(err);
-      navigate('/Error')
+      navigate("/Error");
     }
   };
 
   return (
     <section>
-        <div className={styles.wrapper}>
-      <div className={styles.container}>
-        
+      <div className={styles.wrapper}>
         <div className={styles.container}>
-          <Title
-            className={styles.mb24}
-            {...TitleDefault.args}
-            text="Log in to your account"
-          />
-          <form action="" onSubmit={signIn}>
-
-            <h3 className={styles.subTitle}>Email</h3>
-            <Input
-              title="Email"
-              placeholder="Email"
-              type="email"
-              onChange={(e) => setEmail(e.currentTarget.value)}
-              className={styles.input}
+          <div className={styles.container}>
+            <Title
+              className={styles.mb24}
+              {...TitleDefault.args}
+              text="Log in to your account"
             />
-            <h3 className={styles.subTitle}>Password</h3>
-            <Input
-              title="password"
-              type="password"
-              placeholder="password"
-              onChange={(e) => setPassword(e.currentTarget.value)}
-              className={styles.input}
-            />
-          
-            <Button {...ButtonLarge.args}
-                text="Create account"
+            <form action="" onSubmit={signIn}>
+              <h3 className={styles.subTitle}>Email</h3>
+              <Input
+                title="Email"
+                placeholder="Email"
+                type="email"
+                onChange={(e) => setEmail(e.currentTarget.value)}
+                className={styles.input}
               />
-          </form>
+              <h3 className={styles.subTitle}>Password</h3>
+              <Input
+                title="password"
+                type="password"
+                placeholder="password"
+                onChange={(e) => setPassword(e.currentTarget.value)}
+                className={styles.input}
+              />
+
+              <Button {...ButtonLarge.args} text="Create account" />
+            </form>
+          </div>
         </div>
-      </div>
-      <Image src={girl} alt={""} />
+        <Image src={girl} alt={""} />
       </div>
     </section>
   );

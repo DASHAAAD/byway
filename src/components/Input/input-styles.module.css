@@ -1,18 +1,18 @@
 .title {
-    margin-bottom: 6px;
-    font-weight: var(--font-weight-Medium);
-    font-size: 18px;
-    line-height: 160%;
-    color: var(--text--color--dark);
+  margin-bottom: 6px;
+  font-weight: var(--font-weight-Medium);
+  font-size: 18px;
+  line-height: 160%;
+  color: var(--text--color--dark);
 }
- 
+
 .input {
-    margin-bottom: 24px;
-    padding: 16px;
-    width: 620px;
-    height: 58px;
-    color: var(--title-color-dark);
-    font-size: 16px;
-    border: 1px solid var(--scheme-dark-Secondary);
-    border-radius: 8px;
+  margin-bottom: 24px;
+  padding: 16px;
+  width: 620px;
+  height: 58px;
+  color: var(--title-color-dark);
+  font-size: 16px;
+  border: 1px solid var(--scheme-dark-Secondary);
+  border-radius: 8px;
 }

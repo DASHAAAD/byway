@@ -11,9 +11,7 @@ type Story = StoryObj<typeof meta>;
 
 export const DefaulInput: Story = {
   args: {
-    className: 'CLASS FORMITE,',
-    title: 'TITLE FORMITEM',
+    className: "CLASS FORMITE,",
+    title: "TITLE FORMITEM",
   },
 };
-
-

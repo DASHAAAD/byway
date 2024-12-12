@@ -9,7 +9,7 @@ interface СategoriesСardProps {
 
 export const СategoriesСard = ({ title, text }: СategoriesСardProps) => {
   return (
-    <div >
+    <div>
       <div>
         <Image src={astrology} alt={""} />
       </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import styles from './reviews-card-styles.module.css'
+import styles from "./reviews-card-styles.module.css";
 
 import Image from "next/image";
 import img from "@/image/avatar (1).png";
@@ -31,8 +31,6 @@ export const CardReviewsArray = [
     imgUrl: img,
   },
 ];
-
-
 
 export const ReviewsCard = () => {
   return (

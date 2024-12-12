@@ -1,69 +1,66 @@
-import React from 'react';
+import React from "react";
 
-import { NavWrapper} from './menu';
-import { NavList } from './menu';
-import { StoryObj } from '@storybook/react';
+import { NavWrapper } from "./menu";
+import { NavList } from "./menu";
+import { StoryObj } from "@storybook/react";
 
 const meta = {
-    title: 'NavWrapper',
-    component: NavWrapper,
-}
+  title: "NavWrapper",
+  component: NavWrapper,
+};
 
-export default meta
-type Story = StoryObj<typeof meta>
-
-
+export default meta;
+type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-    args: {
-        children: (
-            <>
-                <NavWrapper.Nav>Toggle Menu</NavWrapper.Nav>
-                <NavWrapper.List>
-                    {NavList.map(item => (
-                        <NavWrapper.Item key={item.id}>{item.text}</NavWrapper.Item>
-                    ))}
-                </NavWrapper.List>
-            </>
-        ),
-    }
-}
+  args: {
+    children: (
+      <>
+        <NavWrapper.Nav>Toggle Menu</NavWrapper.Nav>
+        <NavWrapper.List>
+          {NavList.map((item) => (
+            <NavWrapper.Item key={item.id}>{item.text}</NavWrapper.Item>
+          ))}
+        </NavWrapper.List>
+      </>
+    ),
+  },
+};
 
 export const ListEditProfile = [
-    {
-        id: 'one',
-        text: 'Courses'
-    },
-    {
-        id: 'two',
-        text: 'Purchases'
-    },
-    {
-        id: 'three',
-        text: 'Shopping cart'
-    },
-    {
-        id: 'four',
-        text: 'Wishlist'
-    },
-    {
-        id: 'five',
-        text: 'Log out'
-    }
-]
+  {
+    id: "one",
+    text: "Courses",
+  },
+  {
+    id: "two",
+    text: "Purchases",
+  },
+  {
+    id: "three",
+    text: "Shopping cart",
+  },
+  {
+    id: "four",
+    text: "Wishlist",
+  },
+  {
+    id: "five",
+    text: "Log out",
+  },
+];
 
-
-export const MenuEditProfile:Story = {
-    args: {
-        children: (
-            <>
-                <NavWrapper.Nav>Profile</NavWrapper.Nav>
-                <NavWrapper.List>
-                    {ListEditProfile.map(item => (
-                        <NavWrapper.Item key={item.id}>{item.text}</NavWrapper.Item>
-                    ))}
-                </NavWrapper.List>
-            </>
-        ),
-    }
-}
+export const MenuEditProfile: Story = {
+  args: {
+    children: (
+      <>
+        <NavWrapper.Nav>Profile</NavWrapper.Nav>
+        <NavWrapper.List>
+          {ListEditProfile.map((item) => (
+            <NavWrapper.Item key={item.id}>{item.text}</NavWrapper.Item>
+          ))}
+        </NavWrapper.List>
+      </>
+    ),
+  },
+};

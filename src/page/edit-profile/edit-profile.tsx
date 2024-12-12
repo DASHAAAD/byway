@@ -24,25 +24,25 @@ const EditProfile: FunctionComponent = () => {
   const [LinksThree, setLinksThree] = useState("");
 
   const dispatch = useDispatch();
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const handleSubmit = async () => {
     dispatch(
-      addText({ name, headline, language, LinksOne, LinkstWO, LinksThree })
+      addText({ name, headline, language, LinksOne, LinkstWO, LinksThree }),
     );
-    navigate('/Profile')
+    navigate("/Profile");
   };
   return (
     <Container>
       <div className={styles.wrapper}>
-      <Title
-            className={styles.mb40}
-            {...TitleDefault.args}
-            text="My profile"
-          />
+        <Title
+          className={styles.mb40}
+          {...TitleDefault.args}
+          text="My profile"
+        />
         <div className={styles.flex}>
           <div className={styles.left}>
-            <CardUser {...OneUser.args} className={styles.mb40}/>
+            <CardUser {...OneUser.args} className={styles.mb40} />
             <NavWrapper {...MenuEditProfile.args} />
           </div>
           <div>
@@ -118,7 +118,8 @@ const EditProfile: FunctionComponent = () => {
                   placeholder="byway.com"
                 />
               </div>
-              <Button {...ButtonLarge.args}
+              <Button
+                {...ButtonLarge.args}
                 text="Save changes"
                 onClick={handleSubmit}
               />

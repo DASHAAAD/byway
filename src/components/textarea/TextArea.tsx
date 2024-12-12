@@ -1,21 +1,12 @@
-import React from 'react'
+import React from "react";
 
-interface Type  {
-    className: string,
-    title: string
+interface Type {
+  className: string;
+  title: string;
 }
 
-const TextArea: React.FC<Type> = ({
-    className,
-    title,
-    ...props
+const TextArea: React.FC<Type> = ({ className, title, ...props }) => (
+  <textarea title={title} {...props} className={className} />
+);
 
-}) => (
-    <textarea
-        title={title}
-        {...props}
-        className={className}
-    />
-)
-
-export default TextArea
+export default TextArea;

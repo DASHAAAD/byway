@@ -10,6 +10,10 @@ interface ButtonBlackProps {
 }
 
 const Button: FC<ButtonBlackProps> = (item) => {
-  return <button onClick={item.onClick} className={style.button} {...item}>{item.text}</button>;
+  return (
+    <button onClick={item.onClick} className={style.button} {...item}>
+      {item.text}
+    </button>
+  );
 };
- export default Button
+export default Button;
