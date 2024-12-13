@@ -1,3 +1,4 @@
+"use client";
 import Logo from "@/components/logo/Logo";
 import React from "react";
 import styles from "./footer.module.css";

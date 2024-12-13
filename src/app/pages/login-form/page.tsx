@@ -1,13 +1,14 @@
 /* eslint-disable react-hooks/rules-of-hooks */
+"use client"
 import React, { FunctionComponent, useState } from "react";
 import styles from "../auth-register/auth-register-styles.module.css";
 
-import { auth } from "../../app/firebase";
+import { auth } from "../../firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 
 import Button from "@/components/button/button";
-import Input from "@/components/input/input";
-import { Title } from "@/components/title/title";
+import Input from "@/components/Input/Input";
+import { Title } from "@/components/Title/Title";
 
 import Image from "next/image";
 import girl from "../../image/girl.png";
@@ -15,7 +16,7 @@ import { setUser } from "@/slice/form-slice";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { ButtonLarge } from "@/components/button/button-ui.stories";
-import { TitleDefault } from "@/components/title/title-ui.stories";
+import { TitleDefault } from "@/components/Title/title-ui.stories";
 
 const LoginForm: FunctionComponent = () => {
   const dispatch = useDispatch();

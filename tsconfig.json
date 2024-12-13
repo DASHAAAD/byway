@@ -34,6 +34,6 @@
     "src/sections/Header/Header.stories.jsx",
     "src/components/button/button-ui.stories.ts",
     "src/app/firebase/firebase.оы"
-  ],
+, "src/app/pages/index.js", "src/components/ReduxProvider.jsx"  ],
   "exclude": ["node_modules"]
 }

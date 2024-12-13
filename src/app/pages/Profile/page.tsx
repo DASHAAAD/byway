@@ -1,9 +1,10 @@
+"use client";
 import React, { FC, useState } from "react";
 import { useSelector } from "react-redux";
 import styles from "./profile-styles.module.css";
 
 import { Container } from "@/components/Container";
-import { Title } from "@/components/title/title";
+import { Title } from "@/components/Title/Title";
 import { List } from "../edit-profile/edit-profile-list";
 
 import Image from "next/image";
@@ -22,7 +23,7 @@ interface Type {
   };
 }
 
-export const Profile: FC = () => {
+const Profile: FC = () => {
   const { name, headline, language, LinksOne, LinkstWO, LinksThree } =
     useSelector((state: Type) => state.TextSlice);
 
@@ -89,3 +90,5 @@ export const Profile: FC = () => {
     </Container>
   );
 };
+
+export default Profile

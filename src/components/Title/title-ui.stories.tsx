@@ -1,6 +1,7 @@
+"use client";
 import React from "react";
 import type { StoryObj } from "@storybook/react";
-import { Title } from "./title";
+import { Title } from "./Title";
 
 const meta = {
   title: "default/Title",

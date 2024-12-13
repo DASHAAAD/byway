@@ -1,3 +1,4 @@
+"use client";
 import type { StoryObj } from "@storybook/react";
 
 import style from "./user-card-styles.module.css";

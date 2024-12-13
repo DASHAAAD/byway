@@ -1,3 +1,4 @@
+"use client";
 import React, { FC, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Image from "next/image";

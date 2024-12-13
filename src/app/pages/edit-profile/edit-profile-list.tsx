@@ -1,3 +1,4 @@
+"use client";
 import { nanoid } from "@reduxjs/toolkit";
 
 export const List = [

@@ -1,3 +1,4 @@
+"use client";
 import { createSlice, nanoid } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 import { ReactNode } from "react";

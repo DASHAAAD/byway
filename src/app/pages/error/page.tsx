@@ -1,7 +1,8 @@
+"use client";
 import React, { FunctionComponent } from "react";
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
+const Wrapper = styled.div`
   width: 100%;
   height: 100vh;
   background-color: #18191b;
@@ -17,10 +18,12 @@ const Title = styled.h1`
   line-height: 34px;
 `;
 
-export const Error: FunctionComponent = () => {
+const Error: FunctionComponent = () => {
   return (
     <Wrapper>
       <Title>страница не найдена</Title>
     </Wrapper>
   );
 };
+
+export default Error;

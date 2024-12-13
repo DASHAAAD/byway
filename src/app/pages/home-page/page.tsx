@@ -1,3 +1,4 @@
+"use client";
 import React, { FC } from "react";
 
 import Image from "next/image";
@@ -12,11 +13,11 @@ import { CardUser } from "@/components/cards/user-card/user-card";
 import { СategoriesСard } from "@/components/cards/categories-card/categories-card";
 
 import { Container } from "@/components/Container";
-import { Title } from "@/components/title/title";
+import { Title } from "@/components/Title/Title";
 import {
   TitleDefault,
   TitleNumbers,
-} from "@/components/title/title-ui.stories";
+} from "@/components/Title/title-ui.stories";
 import Button from "@/components/button/button";
 import {
   ButtonMedium,

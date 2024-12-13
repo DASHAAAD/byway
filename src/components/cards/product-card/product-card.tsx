@@ -1,3 +1,4 @@
+"use client";
 import React, { FC } from "react";
 
 import style from "./product-card-styles.module.css";

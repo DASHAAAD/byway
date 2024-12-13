@@ -1,7 +1,8 @@
+"use client";
 import React, { FunctionComponent, useState } from "react";
 import styles from "./edit-profile-styles.module.css";
 import { List } from "./edit-profile-list";
-import Input from "@/components/input/input";
+import Input from "@/components/Input/Input";
 import { MenuEditProfile } from "@/components/menu/menu-ui.stories";
 import { NavWrapper } from "@/components/menu/menu";
 import { CardUser } from "@/components/cards/user-card/user-card";
@@ -12,8 +13,8 @@ import { addText } from "@/slice/text-slice";
 import { useNavigate } from "react-router-dom";
 import { ButtonLarge } from "@/components/button/button-ui.stories";
 import Button from "@/components/button/button";
-import { Title } from "@/components/title/title";
-import { TitleDefault } from "@/components/title/title-ui.stories";
+import { Title } from "@/components/Title/Title";
+import { TitleDefault } from "@/components/Title/title-ui.stories";
 
 const EditProfile: FunctionComponent = () => {
   const [name, setName] = useState("");

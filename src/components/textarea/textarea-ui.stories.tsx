@@ -1,5 +1,6 @@
+"use client";
 import type { StoryObj } from "@storybook/react";
-import TextArea from "./textarea";
+import TextArea from "./TextArea";
 
 const meta = {
   title: "default/TextArea",

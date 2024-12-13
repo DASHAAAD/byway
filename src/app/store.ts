@@ -1,3 +1,4 @@
+"use client";
 import { configureStore } from "@reduxjs/toolkit";
 
 import { userSlice } from "@/slice/card-user-slice";

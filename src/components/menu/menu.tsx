@@ -1,3 +1,4 @@
+"use client";
 import React, { createContext, FC, useContext, useState } from "react";
 
 // обёрка всего меню

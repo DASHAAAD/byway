@@ -1,3 +1,4 @@
+"use client";
 import type { StoryObj } from "@storybook/react";
 import { ProductCard } from "./product-card";
 

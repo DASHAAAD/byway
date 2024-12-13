@@ -1,3 +1,4 @@
+"use client";
 import React, { FunctionComponent } from "react";
 import Image from "next/image";
 import logo from "../../image/logo.svg";

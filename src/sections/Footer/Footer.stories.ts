@@ -1,3 +1,4 @@
+"use client";
 import type { StoryObj } from "@storybook/react";
 import Footer from "./Footer";
 

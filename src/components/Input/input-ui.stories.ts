@@ -1,5 +1,6 @@
+"use client";
 import type { StoryObj } from "@storybook/react";
-import Input from "./input";
+import Input from "./Input";
 
 const meta = {
   title: "default/FormItem",
