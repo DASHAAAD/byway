@@ -15,6 +15,7 @@ import { ButtonLarge } from "@/components/button/button-ui.stories";
 import Button from "@/components/button/button";
 import { Title } from "@/components/Title/Title";
 import { TitleDefault } from "@/components/Title/title-ui.stories";
+import { useRouter } from "next/navigation";
 
 const EditProfile: FunctionComponent = () => {
   const [name, setName] = useState("");
@@ -25,13 +26,13 @@ const EditProfile: FunctionComponent = () => {
   const [LinksThree, setLinksThree] = useState("");
 
   const dispatch = useDispatch();
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const handleSubmit = async () => {
     dispatch(
       addText({ name, headline, language, LinksOne, LinkstWO, LinksThree }),
     );
-    navigate("/Profile");
+    router.push("./Profile");
   };
   return (
     <Container>

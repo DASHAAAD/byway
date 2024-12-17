@@ -2,9 +2,9 @@
 import React, { FC } from "react";
 
 import Image from "next/image";
-import people from "../../image/people.png";
-import man from "../../image/man.png";
-import man2 from "../../image/man2.png";
+import people from "../../../image/people.png";
+import man from "../../../image/man.png";
+import man2 from "../../../image/man2.png";
 
 import style from "./home-page-styles.module.css";
 

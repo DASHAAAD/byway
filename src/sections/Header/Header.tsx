@@ -15,7 +15,7 @@ const Header: FC = () => {
   const [userLog, setUserLog] = useState(false);
   onAuthStateChanged(auth, (user) => {
     if (user) {
-      setUserLog(false);
+      setUserLog(true);
       console.log("Пользователь вошел");
     } else {
       setUserLog(false);
@@ -43,7 +43,7 @@ const Header: FC = () => {
         </form>
 
         <div className={styles.buttons}>
-          <Link className={styles.link} href="/">
+          <a className={styles.link}>
             <svg
               width="24"
               height="24"
@@ -60,10 +60,10 @@ const Header: FC = () => {
                 strokeLinejoin="round"
               />
             </svg>
-          </Link>
+          </a>
 
           {userLog ? (
-            <Link href="/pages/edit-profile">
+            <Link href="/">
               <svg
                 width="40"
                 height="40"
@@ -82,10 +82,10 @@ const Header: FC = () => {
             </Link>
           ) : (
             <>
-              <Link className={styles.buttonOne} href="/pages/login-form">
+              <Link className={styles.buttonOne} href="./pages/login-form">
                 Log in
               </Link>
-              <Link className={styles.buttonTwo} href="/pages/register">
+              <Link className={styles.buttonTwo} href="./pages/auth-register">
                 Sign up
               </Link>
             </>

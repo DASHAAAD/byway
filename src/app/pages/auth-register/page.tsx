@@ -14,14 +14,13 @@ import { Title } from "@/components/Title/Title";
 import girl from "@/image/girl.png";
 import Image from "next/image";
 
-import { useNavigate } from "react-router-dom";
 import { ButtonLarge } from "@/components/button/button-ui.stories";
 import Button from "@/components/button/button";
-
+import { useRouter } from "next/navigation";
 
 const Register: FunctionComponent = () => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -39,10 +38,9 @@ const Register: FunctionComponent = () => {
       e.preventDefault;
       setEmail("");
       setPassword("");
-      // navigate("/LoginForm");
+      router.push("./pages/login-form");
     } catch (err) {
-      // navigate("/Error");
-      // console.error(err);
+      router.push("./pages/error");
     }
   };
 

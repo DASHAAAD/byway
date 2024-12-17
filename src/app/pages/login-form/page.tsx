@@ -1,12 +1,13 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-"use client"
+"use client";
 import React, { FunctionComponent, useState } from "react";
 import styles from "../auth-register/auth-register-styles.module.css";
 
 import { auth } from "../../firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
-
+import store from "../../store/store";
 import Button from "@/components/button/button";
+
 import Input from "@/components/Input/Input";
 import { Title } from "@/components/Title/Title";
 
@@ -14,7 +15,7 @@ import Image from "next/image";
 import girl from "../../../image/girl.png";
 import { setUser } from "@/app/store/slice/form-slice";
 import { useDispatch } from "react-redux";
-import { useRouter } from 'next/router';
+import { useRouter } from "next/navigation";
 import { ButtonLarge } from "@/components/button/button-ui.stories";
 import { TitleDefault } from "@/components/Title/title-ui.stories";
 
@@ -37,11 +38,10 @@ const LoginForm: FunctionComponent = () => {
       console.log("успешно");
       setEmail("");
       setPassword("");
-      router.push('./edit-profile')
+      router.push("./pages/edit-profile");
     } catch (err) {
       console.error(err);
-      // navigate("/Error");
-      router.push('./edit-profile')
+      router.push("./pages/error");
     }
   };
 
