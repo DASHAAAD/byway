@@ -1,6 +1,6 @@
 "use client";
 import React, { FC, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+
 import Image from "next/image";
 
 import { auth } from "../../app/firebase";
@@ -9,12 +9,13 @@ import Logo from "@/components/logo/Logo";
 import search from "../../image/search.png";
 import styles from "../Header/header.module.css";
 import { onAuthStateChanged } from "firebase/auth";
+import Link from "next/link";
 
 const Header: FC = () => {
   const [userLog, setUserLog] = useState(false);
   onAuthStateChanged(auth, (user) => {
     if (user) {
-      setUserLog(true);
+      setUserLog(false);
       console.log("Пользователь вошел");
     } else {
       setUserLog(false);
@@ -25,7 +26,7 @@ const Header: FC = () => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <Link className={styles.logo} to="/">
+        <Link className={styles.logo} href="/">
           <Logo />
           <p className={styles.link}>Categories</p>
         </Link>
@@ -42,7 +43,7 @@ const Header: FC = () => {
         </form>
 
         <div className={styles.buttons}>
-          <Link className={styles.link} to="/">
+          <Link className={styles.link} href="/">
             <svg
               width="24"
               height="24"
@@ -62,7 +63,7 @@ const Header: FC = () => {
           </Link>
 
           {userLog ? (
-            <Link to="/EditProfile">
+            <Link href="/pages/edit-profile">
               <svg
                 width="40"
                 height="40"
@@ -81,10 +82,10 @@ const Header: FC = () => {
             </Link>
           ) : (
             <>
-              <Link className={styles.buttonOne} to="/LoginForm">
+              <Link className={styles.buttonOne} href="/pages/login-form">
                 Log in
               </Link>
-              <Link className={styles.buttonTwo} to="/Register">
+              <Link className={styles.buttonTwo} href="/pages/register">
                 Sign up
               </Link>
             </>

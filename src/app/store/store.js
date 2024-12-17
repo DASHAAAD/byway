@@ -1,13 +1,13 @@
 "use client";
 import { configureStore } from "@reduxjs/toolkit";
 
-import { userSlice } from "@/slice/card-user-slice";
+import { userSlice } from "@/app/store/slice/card-user-slice";
 import { coursesSlice } from "@/components/courses-list/courses-list-slice";
-import Users from "@/slice/form-slice";
-import { TextSlice } from "@/slice/text-slice";
+import Users from "@/app/store/slice/form-slice";
+import { TextSlice } from "@/app/store/slice/text-slice";
 import { ProductCard } from "@/components/cards/product-card/product-card-slice";
 
-export const store = configureStore({
+const store = configureStore({
   reducer: {
     userSlice: userSlice.reducer,
     coursesSlice: coursesSlice.reducer,
@@ -17,6 +17,5 @@ export const store = configureStore({
   },
 });
 
-export type RootState = ReturnType<typeof store.getState>;
+export default store;
 
-export type AppDispatch = typeof store.dispatch;

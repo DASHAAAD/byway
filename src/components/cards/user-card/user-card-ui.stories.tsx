@@ -4,7 +4,7 @@ import type { StoryObj } from "@storybook/react";
 import style from "./user-card-styles.module.css";
 import man from "../../../image/categoryIcon.png";
 import Image from "next/image";
-import { userSlice } from "../../../slice/card-user-slice";
+import { userSlice } from "../../../app/store/slice/card-user-slice";
 
 const meta = {
   title: "default/CardUser",

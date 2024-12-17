@@ -11,16 +11,16 @@ import Input from "@/components/Input/Input";
 import { Title } from "@/components/Title/Title";
 
 import Image from "next/image";
-import girl from "../../image/girl.png";
-import { setUser } from "@/slice/form-slice";
+import girl from "../../../image/girl.png";
+import { setUser } from "@/app/store/slice/form-slice";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from 'next/router';
 import { ButtonLarge } from "@/components/button/button-ui.stories";
 import { TitleDefault } from "@/components/Title/title-ui.stories";
 
 const LoginForm: FunctionComponent = () => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
+  const router = useRouter();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -37,10 +37,11 @@ const LoginForm: FunctionComponent = () => {
       console.log("успешно");
       setEmail("");
       setPassword("");
-      navigate("/EditProfile");
+      router.push('./edit-profile')
     } catch (err) {
       console.error(err);
-      navigate("/Error");
+      // navigate("/Error");
+      router.push('./edit-profile')
     }
   };
 

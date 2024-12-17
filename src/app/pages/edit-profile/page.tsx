@@ -9,7 +9,7 @@ import { CardUser } from "@/components/cards/user-card/user-card";
 import { OneUser } from "@/components/cards/user-card/user-card-ui.stories";
 import { Container } from "@/components/Container";
 import { useDispatch } from "react-redux";
-import { addText } from "@/slice/text-slice";
+import { addText } from "@/app/store/slice/text-slice";
 import { useNavigate } from "react-router-dom";
 import { ButtonLarge } from "@/components/button/button-ui.stories";
 import Button from "@/components/button/button";
