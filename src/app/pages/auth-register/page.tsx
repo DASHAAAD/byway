@@ -1,6 +1,6 @@
 "use client";
 import React, { FunctionComponent, useState } from "react";
-import { auth } from "@/app/firebase";
+import { auth } from "@/firebase";
 
 import styles from "./auth-register-styles.module.css";
 
@@ -8,7 +8,7 @@ import Input from "@/components/Input/Input";
 
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useDispatch } from "react-redux";
-import { setUser } from "@/app/store/slice/form-slice";
+import { setUser } from "@/store/slice/form-slice";
 import { Title } from "@/components/Title/Title";
 
 import girl from "@/image/girl.png";

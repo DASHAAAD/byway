@@ -3,7 +3,7 @@ import React, { FC, useEffect, useState } from "react";
 
 import Image from "next/image";
 
-import { auth } from "../../app/firebase";
+import { auth } from "../../firebase";
 
 import Logo from "@/components/logo/Logo";
 import search from "../../image/search.png";

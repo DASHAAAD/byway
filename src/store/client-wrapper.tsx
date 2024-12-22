@@ -1,7 +1,7 @@
 "use client"; // Этот компонент теперь клиентский
 
 import { Provider } from "react-redux";
-import store from "./store/store";
+import store from "@/store/store";
 import React, { FC } from "react";
 
 interface Type {

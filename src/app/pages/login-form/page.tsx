@@ -3,7 +3,7 @@
 import React, { FunctionComponent, useState } from "react";
 import styles from "../auth-register/auth-register-styles.module.css";
 
-import { auth } from "../../firebase";
+import { auth } from "../../../firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import store from "../../store/store";
 import Button from "@/components/button/button";

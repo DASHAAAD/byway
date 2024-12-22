@@ -1,5 +1,5 @@
 "use client";
-import { db } from "@/app/firebase";
+import { db } from "@/firebase";
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import {
   getFirestore,
